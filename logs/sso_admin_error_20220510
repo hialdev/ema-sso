@@ -1,0 +1,17 @@
+2022-05-10 20:12:03 [E_NOTICE]	 Message : Undefined variable: dark_theme	 Errfile : /app/ema/sso/scripts/cache/admin_app_ema_sso_scripts_app_views_admin_dashboard_index.volt.php	 Errline : 21
+2022-05-10 20:12:06 [E_NOTICE]	 Message : Undefined variable: dark_theme	 Errfile : /app/ema/sso/scripts/cache/admin_app_ema_sso_scripts_app_views_admin_application_index.volt.php	 Errline : 21
+2022-05-10 21:40:44 [E_NOTICE]	 Message : Undefined variable: dark_theme	 Errfile : /app/ema/sso/scripts/cache/admin_app_ema_sso_scripts_app_views_admin_dashboard_index.volt.php	 Errline : 21
+2022-05-10 21:40:47 [E_NOTICE]	 Message : Undefined variable: dark_theme	 Errfile : /app/ema/sso/scripts/cache/admin_app_ema_sso_scripts_app_views_admin_application_index.volt.php	 Errline : 21
+2022-05-10 21:43:04 [E_NOTICE]	 Message : Undefined variable: dark_theme	 Errfile : /app/ema/sso/scripts/cache/admin_app_ema_sso_scripts_app_views_admin_application_index.volt.php	 Errline : 21
+2022-05-10 21:46:22 [E_NOTICE]	 Message : Undefined index: icon	 Errfile : /app/ema/sso/scripts/cache/admin_app_ema_sso_scripts_app_views_admin_employee_index.volt.php	 Errline : 255
+2022-05-10 21:46:26 [E_WARNING]	 Message : Phalcon\Mvc\View\Engine\Volt\Compiler::compileFile(/app/ema/sso/scripts/cache//admin_app_ema_sso_scripts_app_views_admin_setting_index.volt.php): failed to open stream: Permission denied	 Errfile : /app/ema/sso/scripts/app/bootstrap/web.php	 Errline : 319
+2022-05-10 21:46:27 [E_NOTICE]	 Message : Undefined variable: dark_theme	 Errfile : /app/ema/sso/scripts/cache/admin_app_ema_sso_scripts_app_views_admin_dashboard_index.volt.php	 Errline : 21
+2022-05-10 21:46:33 [E_NOTICE]	 Message : Undefined index: icon	 Errfile : /app/ema/sso/scripts/cache/admin_app_ema_sso_scripts_app_views_admin_employee_index.volt.php	 Errline : 255
+2022-05-10 21:46:36 [E_WARNING]	 Message : Phalcon\Mvc\View\Engine\Volt\Compiler::compileFile(/app/ema/sso/scripts/cache//admin_app_ema_sso_scripts_app_views_admin_setting_index.volt.php): failed to open stream: Permission denied	 Errfile : /app/ema/sso/scripts/app/bootstrap/web.php	 Errline : 319
+2022-05-10 21:46:37 [E_NOTICE]	 Message : Undefined variable: dark_theme	 Errfile : /app/ema/sso/scripts/cache/admin_app_ema_sso_scripts_app_views_admin_dashboard_index.volt.php	 Errline : 21
+2022-05-10 21:46:38 [E_NOTICE]	 Message : Undefined index: icon	 Errfile : /app/ema/sso/scripts/cache/admin_app_ema_sso_scripts_app_views_admin_employee_index.volt.php	 Errline : 255
+2022-05-10 21:46:40 [E_NOTICE]	 Message : Undefined variable: dark_theme	 Errfile : /app/ema/sso/scripts/cache/admin_app_ema_sso_scripts_app_views_admin_application_index.volt.php	 Errline : 21
+2022-05-10 21:46:41 [E_NOTICE]	 Message : Undefined variable: dark_theme	 Errfile : /app/ema/sso/scripts/cache/admin_app_ema_sso_scripts_app_views_admin_account_index.volt.php	 Errline : 21
+2022-05-10 21:53:17 [E_NOTICE]	 Message : Undefined variable: dark_theme	 Errfile : /app/ema/sso/scripts/cache/admin_app_ema_sso_scripts_app_views_admin_account_index.volt.php	 Errline : 21
+2022-05-10 21:53:19 [E_NOTICE]	 Message : Undefined variable: dark_theme	 Errfile : /app/ema/sso/scripts/cache/admin_app_ema_sso_scripts_app_views_admin_application_index.volt.php	 Errline : 21
+2022-05-10 21:53:21 [E_NOTICE]	 Message : Undefined variable: dark_theme	 Errfile : /app/ema/sso/scripts/cache/admin_app_ema_sso_scripts_app_views_admin_dashboard_index.volt.php	 Errline : 21

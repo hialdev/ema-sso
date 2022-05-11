@@ -1,0 +1,6 @@
+2022-04-28 13:05:39 [E_NOTICE]	 Message : Undefined variable: dark_theme	 Errfile : /app/ema/sso/scripts/cache/admin_app_ema_sso_scripts_app_views_admin_dashboard_index.volt.php	 Errline : 21
+2022-04-28 13:05:47 [E_NOTICE]	 Message : Undefined variable: dark_theme	 Errfile : /app/ema/sso/scripts/cache/admin_app_ema_sso_scripts_app_views_admin_dashboard_index.volt.php	 Errline : 21
+2022-04-28 13:05:48 [E_NOTICE]	 Message : Undefined variable: dark_theme	 Errfile : /app/ema/sso/scripts/cache/admin_app_ema_sso_scripts_app_views_admin_dashboard_index.volt.php	 Errline : 21
+2022-04-28 13:42:03 [E_NOTICE]	 Message : Undefined variable: dark_theme	 Errfile : /app/ema/sso/scripts/cache/admin_app_ema_sso_scripts_app_views_admin_application_index.volt.php	 Errline : 21
+2022-04-28 13:42:05 [E_NOTICE]	 Message : Undefined variable: dark_theme	 Errfile : /app/ema/sso/scripts/cache/admin_app_ema_sso_scripts_app_views_admin_dashboard_index.volt.php	 Errline : 21
+2022-04-28 13:42:27 [E_NOTICE]	 Message : Undefined variable: dark_theme	 Errfile : /app/ema/sso/scripts/cache/admin_app_ema_sso_scripts_app_views_admin_application_index.volt.php	 Errline : 21

@@ -1,0 +1,10 @@
+2022-04-27 17:10:37 [E_NOTICE]	 Message : Undefined variable: dark_theme	 Errfile : /app/ema/sso/scripts/cache/admin_app_ema_sso_scripts_app_views_admin_dashboard_index.volt.php	 Errline : 21
+2022-04-27 17:10:42 [E_NOTICE]	 Message : Undefined variable: dark_theme	 Errfile : /app/ema/sso/scripts/cache/admin_app_ema_sso_scripts_app_views_admin_application_index.volt.php	 Errline : 21
+2022-04-27 17:11:40 [E_NOTICE]	 Message : Undefined variable: dark_theme	 Errfile : /app/ema/sso/scripts/cache/admin_app_ema_sso_scripts_app_views_admin_application_index.volt.php	 Errline : 21
+2022-04-27 17:11:48 [E_NOTICE]	 Message : Undefined variable: dark_theme	 Errfile : /app/ema/sso/scripts/cache/admin_app_ema_sso_scripts_app_views_admin_application_index.volt.php	 Errline : 21
+2022-04-27 17:13:12 [E_NOTICE]	 Message : Undefined variable: dark_theme	 Errfile : /app/ema/sso/scripts/cache/admin_app_ema_sso_scripts_app_views_admin_account_index.volt.php	 Errline : 21
+2022-04-27 17:13:18 [E_USER_NOTICE]	 Message : Access to undefined property Employee::lasst_name	 Errfile : /app/ema/sso/scripts/app/models/Employee.php	 Errline : 53
+2022-04-27 17:13:52 [E_NOTICE]	 Message : Undefined index: icon	 Errfile : /app/ema/sso/scripts/cache/admin_app_ema_sso_scripts_app_views_admin_employee_index.volt.php	 Errline : 255
+2022-04-27 17:14:48 [E_NOTICE]	 Message : Undefined variable: dark_theme	 Errfile : /app/ema/sso/scripts/cache/admin_app_ema_sso_scripts_app_views_admin_account_index.volt.php	 Errline : 21
+2022-04-27 17:14:54 [E_NOTICE]	 Message : Undefined variable: dark_theme	 Errfile : /app/ema/sso/scripts/cache/admin_app_ema_sso_scripts_app_views_admin_account_index.volt.php	 Errline : 21
+2022-04-27 17:15:42 [E_NOTICE]	 Message : Undefined variable: dark_theme	 Errfile : /app/ema/sso/scripts/cache/admin_app_ema_sso_scripts_app_views_admin_dashboard_index.volt.php	 Errline : 21

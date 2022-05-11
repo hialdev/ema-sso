@@ -1,0 +1,20 @@
+2022-04-27 15:30:39 [E_DEPRECATED]	 Message : Array and string offset access syntax with curly braces is deprecated	 Errfile : /app/ema/sso/scripts/app/libraries/Utils.php	 Errline : 398
+2022-04-27 15:30:39 [E_WARNING]	 Message : Phalcon\Mvc\View\Engine\Volt\Compiler::compileFile(/app/ema/sso/scripts/cache//account_app_ema_sso_scripts_app_views_account_layouts_public.volt_e_.php): failed to open stream: No such file or directory	 Errfile : /app/ema/sso/scripts/app/bootstrap/web.php	 Errline : 319
+2022-04-27 15:30:40 [E_WARNING]	 Message : Phalcon\Mvc\View\Engine\Volt\Compiler::compileFile(/app/ema/sso/scripts/cache//account_app_ema_sso_scripts_app_views_account_layouts_public.volt_e_.php): failed to open stream: No such file or directory	 Errfile : /app/ema/sso/scripts/app/bootstrap/web.php	 Errline : 319
+2022-04-27 15:31:27 [E_NOTICE]	 Message : Undefined index: vendor.js	 Errfile : /app/ema/sso/scripts/cache/account_app_ema_sso_scripts_app_views_account_auth_login.volt.php	 Errline : 143
+2022-04-27 15:31:27 [E_NOTICE]	 Message : Undefined index: vendor.js	 Errfile : /app/ema/sso/scripts/cache/account_app_ema_sso_scripts_app_views_account_error_404.volt.php	 Errline : 65
+2022-04-27 15:31:27 [E_NOTICE]	 Message : Undefined index: vendor.js	 Errfile : /app/ema/sso/scripts/cache/account_app_ema_sso_scripts_app_views_account_error_404.volt.php	 Errline : 65
+2022-04-27 15:31:27 [E_NOTICE]	 Message : Undefined index: vendor.js	 Errfile : /app/ema/sso/scripts/cache/account_app_ema_sso_scripts_app_views_account_error_404.volt.php	 Errline : 65
+2022-04-27 15:31:27 [E_NOTICE]	 Message : Undefined index: vendor.js	 Errfile : /app/ema/sso/scripts/cache/account_app_ema_sso_scripts_app_views_account_error_404.volt.php	 Errline : 65
+2022-04-27 15:31:27 [E_NOTICE]	 Message : Undefined index: vendor.js	 Errfile : /app/ema/sso/scripts/cache/account_app_ema_sso_scripts_app_views_account_error_404.volt.php	 Errline : 65
+2022-04-27 15:31:27 [E_NOTICE]	 Message : Undefined index: vendor.js	 Errfile : /app/ema/sso/scripts/cache/account_app_ema_sso_scripts_app_views_account_error_404.volt.php	 Errline : 65
+2022-04-27 15:39:01 [E_NOTICE]	 Message : Undefined index: vendor.js	 Errfile : /app/ema/sso/scripts/cache/account_app_ema_sso_scripts_app_views_account_auth_login.volt.php	 Errline : 143
+2022-04-27 15:39:02 [E_NOTICE]	 Message : Undefined index: vendor.js	 Errfile : /app/ema/sso/scripts/cache/account_app_ema_sso_scripts_app_views_account_error_404.volt.php	 Errline : 65
+2022-04-27 15:39:02 [E_NOTICE]	 Message : Undefined index: vendor.js	 Errfile : /app/ema/sso/scripts/cache/account_app_ema_sso_scripts_app_views_account_error_404.volt.php	 Errline : 65
+2022-04-27 15:39:02 [E_NOTICE]	 Message : Undefined index: vendor.js	 Errfile : /app/ema/sso/scripts/cache/account_app_ema_sso_scripts_app_views_account_error_404.volt.php	 Errline : 65
+2022-04-27 15:39:02 [E_NOTICE]	 Message : Undefined index: vendor.js	 Errfile : /app/ema/sso/scripts/cache/account_app_ema_sso_scripts_app_views_account_error_404.volt.php	 Errline : 65
+2022-04-27 17:10:31 [E_NOTICE]	 Message : Trying to get property 'id' of non-object	 Errfile : /app/ema/sso/scripts/app/base/BaseController.php	 Errline : 165
+2022-04-27 17:10:31 [E_NOTICE]	 Message : Trying to get property 'id' of non-object	 Errfile : /app/ema/sso/scripts/cache/account_app_ema_sso_scripts_app_views_account_pages_dashboard.volt.php	 Errline : 223
+2022-04-27 17:15:51 [E_NOTICE]	 Message : Trying to get property 'id' of non-object	 Errfile : /app/ema/sso/scripts/cache/account_app_ema_sso_scripts_app_views_account_pages_dashboard.volt.php	 Errline : 223
+2022-04-27 17:15:57 [E_NOTICE]	 Message : Undefined variable: dark_theme	 Errfile : /app/ema/sso/scripts/cache/account_app_ema_sso_scripts_app_views_account_pages_account.volt.php	 Errline : 21
+2022-04-27 17:15:58 [E_NOTICE]	 Message : Trying to get property 'id' of non-object	 Errfile : /app/ema/sso/scripts/cache/account_app_ema_sso_scripts_app_views_account_pages_dashboard.volt.php	 Errline : 223

@@ -1,0 +1,782 @@
+2022-05-11 10:07:09 [E_USER_NOTICE]	 Message : Access to undefined property Employee::lasst_name	 Errfile : /app/ema/client/scripts/app/models/Employee.php	 Errline : 53
+2022-05-11 10:07:59 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/BaseAppController.php:22
+Stack trace:
+#0 [internal function]: BaseAppController->initialize()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#2 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#3 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#4 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 22
+2022-05-11 10:08:00 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/BaseAppController.php:22
+Stack trace:
+#0 [internal function]: BaseAppController->initialize()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#2 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#3 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#4 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 22
+2022-05-11 10:08:04 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/BaseAppController.php:22
+Stack trace:
+#0 [internal function]: BaseAppController->initialize()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#2 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#3 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#4 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 22
+2022-05-11 10:08:05 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/BaseAppController.php:22
+Stack trace:
+#0 [internal function]: BaseAppController->initialize()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#2 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#3 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#4 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 22
+2022-05-11 10:08:38 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/BaseAppController.php:22
+Stack trace:
+#0 [internal function]: BaseAppController->initialize()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#2 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#3 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#4 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 22
+2022-05-11 10:08:38 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/BaseAppController.php:22
+Stack trace:
+#0 [internal function]: BaseAppController->initialize()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#2 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#3 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#4 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 22
+2022-05-11 10:08:46 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:08:47 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:08:48 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:08:48 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:09:02 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:09:03 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:10:37 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:10:39 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:10:52 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:10:53 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:11:32 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:11:33 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:18:42 [E_WARNING]	 Message : session_start(): Failed to read session data: user (path: /var/lib/php/sessions)	 Errfile : /app/ema/client/scripts/app/bootstrap/web.php	 Errline : 172
+2022-05-11 10:18:43 [E_WARNING]	 Message : session_start(): Failed to read session data: user (path: /var/lib/php/sessions)	 Errfile : /app/ema/client/scripts/app/bootstrap/web.php	 Errline : 172
+2022-05-11 10:19:20 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:19:21 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:19:22 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:19:23 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:19:42 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:19:42 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:19:43 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:19:44 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:19:44 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:19:44 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:19:45 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:19:45 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:19:46 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:19:46 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:19:47 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:19:47 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:19:48 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:19:48 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:19:49 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:19:49 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:19:50 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:19:50 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:19:50 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:19:51 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:19:51 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:19:51 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:19:52 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:19:52 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:19:53 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:19:53 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:20:08 [E_USER_NOTICE]	 Message : Access to undefined property Employee::lasst_name	 Errfile : /app/ema/client/scripts/app/models/Employee.php	 Errline : 53
+2022-05-11 10:20:08 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:20:08 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:20:29 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:20:29 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:20:30 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:20:30 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:20:31 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:20:31 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/HomeController.php:9
+Stack trace:
+#0 [internal function]: HomeController->indexAction()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#3 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#4 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#5 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/HomeController.php	 Errline : 9
+2022-05-11 10:21:02 [E_NOTICE]	 Message : Undefined index: _url	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 21
+2022-05-11 10:21:21 [E_NOTICE]	 Message : Undefined index: _url	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 21
+2022-05-11 10:22:03 [E_NOTICE]	 Message : Undefined index: _url	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 21
+2022-05-11 10:22:06 [E_NOTICE]	 Message : Undefined index: _url	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 21
+2022-05-11 10:22:14 [E_NOTICE]	 Message : Undefined index: _url	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 21
+2022-05-11 10:22:20 [E_NOTICE]	 Message : Undefined index: _url	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 21
+2022-05-11 10:25:38 []	 Message : Uncaught Error: Non-static method Phalcon\Http\Request::getURI() cannot be called statically in /app/ema/client/scripts/app/controllers/web/BaseAppController.php:21
+Stack trace:
+#0 [internal function]: BaseAppController->initialize()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#2 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#3 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#4 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 21
+2022-05-11 10:25:56 []	 Message : Uncaught Error: Non-static method Phalcon\Http\Request::getURI() cannot be called statically in /app/ema/client/scripts/app/controllers/web/BaseAppController.php:21
+Stack trace:
+#0 [internal function]: BaseAppController->initialize()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#2 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#3 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#4 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 21
+2022-05-11 10:26:35 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/BaseAppController.php:22
+Stack trace:
+#0 [internal function]: BaseAppController->initialize()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#2 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#3 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#4 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 22
+2022-05-11 10:26:35 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/BaseAppController.php:22
+Stack trace:
+#0 [internal function]: BaseAppController->initialize()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#2 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#3 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#4 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 22
+2022-05-11 10:27:23 [E_PARSE]	 Message : syntax error, unexpected ''*'' (T_CONSTANT_ENCAPSED_STRING), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'	 Errfile : /app/ema/client/scripts/cache/web_app_ema_client_scripts_app_views_web_project_index.volt.php	 Errline : 89
+2022-05-11 10:27:24 [E_PARSE]	 Message : syntax error, unexpected ''*'' (T_CONSTANT_ENCAPSED_STRING), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'	 Errfile : /app/ema/client/scripts/cache/web_app_ema_client_scripts_app_views_web_project_index.volt.php	 Errline : 89
+2022-05-11 10:27:49 [E_WARNING]	 Message : A non-numeric value encountered	 Errfile : /app/ema/client/scripts/cache/web_app_ema_client_scripts_app_views_web_project_index.volt.php	 Errline : 89
+2022-05-11 10:27:53 [E_WARNING]	 Message : A non-numeric value encountered	 Errfile : /app/ema/client/scripts/cache/web_app_ema_client_scripts_app_views_web_project_index.volt.php	 Errline : 89
+2022-05-11 10:30:26 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/BaseAppController.php:22
+Stack trace:
+#0 [internal function]: BaseAppController->initialize()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#2 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#3 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#4 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 22
+2022-05-11 10:30:26 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/BaseAppController.php:22
+Stack trace:
+#0 [internal function]: BaseAppController->initialize()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#2 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#3 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#4 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 22
+2022-05-11 10:30:38 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/BaseAppController.php:22
+Stack trace:
+#0 [internal function]: BaseAppController->initialize()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#2 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#3 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#4 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 22
+2022-05-11 10:30:38 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/BaseAppController.php:22
+Stack trace:
+#0 [internal function]: BaseAppController->initialize()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#2 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#3 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#4 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 22
+2022-05-11 10:30:39 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/BaseAppController.php:22
+Stack trace:
+#0 [internal function]: BaseAppController->initialize()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#2 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#3 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#4 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 22
+2022-05-11 10:30:39 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/BaseAppController.php:22
+Stack trace:
+#0 [internal function]: BaseAppController->initialize()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#2 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#3 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#4 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 22
+2022-05-11 10:33:47 [E_PARSE]	 Message : syntax error, unexpected ';'	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 28
+2022-05-11 10:33:48 [E_PARSE]	 Message : syntax error, unexpected ';'	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 28
+2022-05-11 10:33:54 [E_NOTICE]	 Message : Undefined variable: request	 Errfile : /app/ema/client/scripts/cache/web_app_ema_client_scripts_app_views_web_project_index.volt.php	 Errline : 60
+2022-05-11 10:34:39 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/BaseAppController.php:25
+Stack trace:
+#0 [internal function]: BaseAppController->initialize()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#2 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#3 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#4 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 25
+2022-05-11 10:34:39 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/BaseAppController.php:25
+Stack trace:
+#0 [internal function]: BaseAppController->initialize()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#2 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#3 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#4 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 25
+2022-05-11 10:35:15 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/BaseAppController.php:25
+Stack trace:
+#0 [internal function]: BaseAppController->initialize()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#2 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#3 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#4 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 25
+2022-05-11 10:35:16 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/BaseAppController.php:25
+Stack trace:
+#0 [internal function]: BaseAppController->initialize()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#2 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#3 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#4 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 25
+2022-05-11 10:35:22 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/BaseAppController.php:25
+Stack trace:
+#0 [internal function]: BaseAppController->initialize()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#2 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#3 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#4 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 25
+2022-05-11 10:35:22 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/BaseAppController.php:25
+Stack trace:
+#0 [internal function]: BaseAppController->initialize()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#2 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#3 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#4 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 25
+2022-05-11 10:35:27 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/BaseAppController.php:25
+Stack trace:
+#0 [internal function]: BaseAppController->initialize()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#2 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#3 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#4 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 25
+2022-05-11 10:35:27 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/BaseAppController.php:25
+Stack trace:
+#0 [internal function]: BaseAppController->initialize()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#2 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#3 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#4 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 25
+2022-05-11 10:42:52 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/BaseAppController.php:43
+Stack trace:
+#0 [internal function]: BaseAppController->initialize()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#2 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#3 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#4 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 43
+2022-05-11 10:42:52 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/BaseAppController.php:43
+Stack trace:
+#0 [internal function]: BaseAppController->initialize()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#2 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#3 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#4 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 43
+2022-05-11 10:44:30 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/BaseAppController.php:43
+Stack trace:
+#0 [internal function]: BaseAppController->initialize()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#2 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#3 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#4 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 43
+2022-05-11 10:44:30 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/BaseAppController.php:43
+Stack trace:
+#0 [internal function]: BaseAppController->initialize()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#2 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#3 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#4 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 43
+2022-05-11 10:46:17 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/BaseAppController.php:43
+Stack trace:
+#0 [internal function]: BaseAppController->initialize()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#2 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#3 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#4 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 43
+2022-05-11 10:46:17 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/BaseAppController.php:43
+Stack trace:
+#0 [internal function]: BaseAppController->initialize()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#2 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#3 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#4 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 43
+2022-05-11 10:46:27 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/BaseAppController.php:43
+Stack trace:
+#0 [internal function]: BaseAppController->initialize()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#2 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#3 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#4 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 43
+2022-05-11 10:46:27 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/BaseAppController.php:43
+Stack trace:
+#0 [internal function]: BaseAppController->initialize()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#2 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#3 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#4 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 43
+2022-05-11 10:46:58 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/BaseAppController.php:43
+Stack trace:
+#0 [internal function]: BaseAppController->initialize()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#2 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#3 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#4 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 43
+2022-05-11 10:46:59 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/BaseAppController.php:43
+Stack trace:
+#0 [internal function]: BaseAppController->initialize()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#2 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#3 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#4 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 43
+2022-05-11 10:47:58 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/BaseAppController.php:43
+Stack trace:
+#0 [internal function]: BaseAppController->initialize()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#2 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#3 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#4 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 43
+2022-05-11 10:47:58 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/BaseAppController.php:43
+Stack trace:
+#0 [internal function]: BaseAppController->initialize()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#2 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#3 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#4 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 43
+2022-05-11 10:48:14 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/BaseAppController.php:43
+Stack trace:
+#0 [internal function]: BaseAppController->initialize()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#2 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#3 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#4 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 43
+2022-05-11 10:48:15 []	 Message : Uncaught Error: Call to undefined function dd() in /app/ema/client/scripts/app/controllers/web/BaseAppController.php:43
+Stack trace:
+#0 [internal function]: BaseAppController->initialize()
+#1 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#2 /app/ema/client/scripts/app/bootstrap/web.php(319): Phalcon\Mvc\Application->handle()
+#3 /app/ema/client/scripts/www/web/index.php(10): include('/app/ema/client...')
+#4 {main}
+  thrown	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 43
+2022-05-11 17:31:49 [E_USER_NOTICE]	 Message : Access to undefined property Employee::lasst_name	 Errfile : /app/ema/client/scripts/app/models/Employee.php	 Errline : 53
+2022-05-11 18:08:00 [E_NOTICE]	 Message : Undefined index: HTTP_REFERER	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 10
+2022-05-11 18:16:20 [E_NOTICE]	 Message : Undefined index: HTTP_REFERER	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 10
+2022-05-11 18:17:10 [E_NOTICE]	 Message : Undefined index: HTTP_REFERER	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 10
+2022-05-11 18:21:02 [E_NOTICE]	 Message : Undefined index: HTTP_REFERER	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 10
+2022-05-11 18:31:36 [E_NOTICE]	 Message : Undefined index: HTTP_REFERER	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 10
+2022-05-11 18:31:43 [E_NOTICE]	 Message : Undefined index: HTTP_REFERER	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 10
+2022-05-11 18:35:24 [E_NOTICE]	 Message : Undefined index: HTTP_REFERER	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 10
+2022-05-11 18:36:32 [E_NOTICE]	 Message : Undefined index: HTTP_REFERER	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 10
+2022-05-11 18:37:10 [E_NOTICE]	 Message : Undefined index: HTTP_REFERER	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 10
+2022-05-11 18:39:05 [E_NOTICE]	 Message : Undefined index: HTTP_REFERER	 Errfile : /app/ema/client/scripts/app/controllers/web/BaseAppController.php	 Errline : 10

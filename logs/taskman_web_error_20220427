@@ -1,0 +1,3 @@
+2022-04-27 15:22:46 [E_WARNING]	 Message : session_start(): Failed to read session data: user (path: /var/lib/php/sessions)	 Errfile : /app/ema/taskman/scripts/app/bootstrap/web.php	 Errline : 172
+2022-04-27 15:22:47 [E_WARNING]	 Message : session_start(): Failed to read session data: user (path: /var/lib/php/sessions)	 Errfile : /app/ema/taskman/scripts/app/bootstrap/web.php	 Errline : 172
+2022-04-27 15:23:11 [E_DEPRECATED]	 Message : Array and string offset access syntax with curly braces is deprecated	 Errfile : /app/ema/taskman/scripts/app/libraries/Utils.php	 Errline : 398

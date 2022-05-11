@@ -1,0 +1,1 @@
+2022-05-11 10:19:59 [E_DEPRECATED]	 Message : Array and string offset access syntax with curly braces is deprecated	 Errfile : /app/ema/sso/scripts/app/libraries/Utils.php	 Errline : 398

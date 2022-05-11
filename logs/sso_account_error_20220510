@@ -1,0 +1,10 @@
+2022-05-10 11:58:24 [E_NOTICE]	 Message : Trying to get property 'id' of non-object	 Errfile : /app/ema/web/scripts/cache/frontend_app_ema_web_scripts_app_views_frontend_pages_dashboard.volt.php	 Errline : 223
+2022-05-10 12:08:18 [E_NOTICE]	 Message : Trying to get property 'id' of non-object	 Errfile : /app/ema/web/scripts/cache/frontend_app_ema_web_scripts_app_views_frontend_pages_dashboard.volt.php	 Errline : 223
+2022-05-10 12:10:55 [E_DEPRECATED]	 Message : Array and string offset access syntax with curly braces is deprecated	 Errfile : /app/ema/sso/scripts/app/libraries/Utils.php	 Errline : 398
+2022-05-10 12:10:59 [E_NOTICE]	 Message : Trying to get property 'id' of non-object	 Errfile : /app/ema/sso/scripts/cache/account_app_ema_sso_scripts_app_views_account_pages_dashboard.volt.php	 Errline : 223
+2022-05-10 21:33:12 [E_DEPRECATED]	 Message : Array and string offset access syntax with curly braces is deprecated	 Errfile : /app/ema/web/scripts/app/libraries/Utils.php	 Errline : 398
+2022-05-10 21:46:03 [E_NOTICE]	 Message : Trying to get property 'id' of non-object	 Errfile : /app/ema/sso/scripts/cache/account_app_ema_sso_scripts_app_views_account_pages_dashboard.volt.php	 Errline : 223
+2022-05-10 21:53:30 [E_NOTICE]	 Message : Trying to get property 'id' of non-object	 Errfile : /app/ema/sso/scripts/cache/account_app_ema_sso_scripts_app_views_account_pages_dashboard.volt.php	 Errline : 223
+2022-05-10 21:56:28 [E_NOTICE]	 Message : Trying to get property 'id' of non-object	 Errfile : /app/ema/sso/scripts/cache/account_app_ema_sso_scripts_app_views_account_pages_dashboard.volt.php	 Errline : 223
+2022-05-10 22:02:25 [E_NOTICE]	 Message : Trying to get property 'id' of non-object	 Errfile : /app/ema/sso/scripts/cache/account_app_ema_sso_scripts_app_views_account_pages_dashboard.volt.php	 Errline : 223
+2022-05-10 22:03:51 [E_NOTICE]	 Message : Trying to get property 'id' of non-object	 Errfile : /app/ema/sso/scripts/cache/account_app_ema_sso_scripts_app_views_account_pages_dashboard.volt.php	 Errline : 223
