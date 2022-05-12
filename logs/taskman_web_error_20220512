@@ -1,0 +1,2 @@
+2022-05-12 11:47:28 [E_USER_NOTICE]	 Message : Access to undefined property Employee::lasst_name	 Errfile : /app/ema/client/scripts/app/models/Employee.php	 Errline : 53
+2022-05-12 16:54:54 [E_USER_NOTICE]	 Message : Access to undefined property Employee::lasst_name	 Errfile : /app/ema/client/scripts/app/models/Employee.php	 Errline : 53
