@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+<?php
+/*
+ * blast console startup
+ *
+ *
+ *
+ * @author: me@tes123.id
+ */
+
+include dirname(__DIR__) . "/app/bootstrap/cli.php";
+
