@@ -42,7 +42,7 @@
             <ul class="menu-sub">
                 <li class="menu-item">
                     <a href="<?= $this->url->get('ticket/active') ?>" class="menu-link">
-                        <div data-i18n="All Categories">Active Ticket <span class="badge badge-center rounded-pill bg-primary ms-2">1</span></div>
+                        <div data-i18n="All Categories">Active Ticket <span class="badge badge-center rounded-pill bg-primary ms-2"><?= $cat ?></span></div>
                     </a>
                 </li>
                 <li class="menu-item">

@@ -20,7 +20,7 @@ return new \Phalcon\Config([
         'db'            => [
             'main'      => 'ws_main',
             'sso'       => 'ws_sso',
-            'taskman'   => 'ws_taskman'
+            'ticket'    => 'ws_ticket'
         ],
         'charset'       => 'utf8',
     ],

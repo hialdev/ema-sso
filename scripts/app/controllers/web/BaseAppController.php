@@ -36,6 +36,20 @@ class BaseAppController extends BaseController
         return $active;
     }
 
+    public function activeTicket()
+    {
+        $uid = $this->getLoggedParams()->accountUid;
+        $id = Account::findByUID($uid)->id;
+        $ticket = Ticket::find([
+            'conditions' => 'status != 3 AND account_id = :id:',
+            'bind' => [
+                'id' => $id,
+            ]
+        ]);
+        $cticket = count($ticket);
+        return $cticket;
+    }
+
     public function initialize()
     {
         $this->application = Application::findByAppId($this->config->application->appId);
@@ -47,12 +61,14 @@ class BaseAppController extends BaseController
             $this->validate();
             $this->setViewData();
             $r = $this->activeMenu();
+            $c = $this->activeTicket();
 
             if (!$this->request->isAjax())
             {
                 $this->validateMenu();
                 $this->view->list_menus = $this->userMenu;
                 $this->view->uri = $r;
+                $this->view->cat = $c;
 
                 if ($this->activePage)
                 {

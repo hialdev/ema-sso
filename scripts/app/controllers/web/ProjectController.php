@@ -5,6 +5,9 @@ class ProjectController extends BaseAppController
 
     public function indexAction()
     {
+        $project = Project::find();
+
+        $this->view->projects = $project;
         $this->view->pick('project/index');
     }
 
@@ -12,7 +15,11 @@ class ProjectController extends BaseAppController
     {
         if ($slug = $this->dispatcher->getParam('slug'))
         {
-            $this->view->slug = $slug;
+            $project = Project::findFirst("slug = '$slug'");
+            $ps = ProjectStatus::find();
+
+            $this->view->status = $ps;
+            $this->view->project = $project;
             $this->view->backUrl = $this->prevUrl();
             $this->view->pick('project/view');
         }else{

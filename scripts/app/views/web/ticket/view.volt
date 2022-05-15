@@ -5,35 +5,41 @@
                     
     <div class="py-3">
         <div>
-            <div class="d-flex gap-2 mb-2"><span class="badge bg-primary">#TICEMA123232</span><span class="badge bg-info">Answered</span><span class="badge bg-label-danger">high</span></div>
-            <h2>{{slug}}!</h2>
-            <div>Project : <strong>Project 1</strong></div>
+            <div class="d-flex gap-2 mb-2"><span class="badge bg-primary">{{ticket.no}}</span>
+                <span class="badge bg-{{ticket.Priority.css}}">{{ticket.Priority.name}}</span>
+                <span class="badge bg-label-{{ticket.Status.css}}">{{ticket.Status.name}}</span>
+            </div>
+            <h2>{{ticket.subject}}</h2>
+            <div>Project : <strong>{{ticket.Project.name}}</strong></div>
+            {% if ticket.status === '3' %}
             <div class="alert alert-warning mt-2" role="alert">
                 Ticket ini telah ditutup, Anda dapat membukanya dengan cara membuat balasan baru
             </div>
+            {% endif %}
         </div>
         <hr>
         <div class="d-flex flex-column gap-3">
-            <div class="card">
+            
+            {% for chat in ticket.chat %}
+            <div class="card {{ chat.Account.uid !== uid ? 'border-top border-primary' : ''}}">
                 <div class="card-body">
                     <div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, itaque? Porro ea harum repellat numquam natus fugit ab qui aperiam iusto aut eaque sunt quam, enim minus. Reprehenderit, laboriosam repudiandae.</p>
-                        <h6>- You <span class="fs-6 fw-normal fst-italic ms-2">08 Des 21, 18:32 WIB</span></h6>
+                        <p>{{chat.content}}</p>
+                        <h6
+                        class="
+                        {{ chat.Account.uid !== uid ? 'text-primary' : ''}}
+                        ">- {{chat.Account.name}} <span class="fs-6 fw-normal fst-italic ms-2">{{chat.created}}</span></h6>
                     </div>
+                    {% if chat.file !== null %}
                     <div class="d-flex flex-wrap gap-2">
                         <a href="" class="d-inline-flex align-items-center gap-2 bg-label-secondary p-2 rounded"><span class="iconify" data-icon="bi:file-earmark-fill"></span>Namafile.jpg</a>
                         <a href="" class="d-inline-flex align-items-center gap-2 bg-label-secondary p-2 rounded"><span class="iconify" data-icon="bi:file-earmark-fill"></span>Namafile.jpg</a>
                     </div>
+                    {% endif %}
                 </div>
             </div>
-            <div class="card border-top border-primary">
-                <div class="card-body">
-                    <div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, itaque? Porro ea harum repellat numquam natus fugit ab qui aperiam iusto aut eaque sunt quam, enim minus. Reprehenderit, laboriosam repudiandae.</p>
-                        <h6 class="text-primary">- OM JT <span class="fs-6 fw-normal fst-italic ms-2">08 Des 21, 18:32 WIB</span></h6>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
+            
             <form action="">
                 <div class="card">
                     <h6 class="card-header">Add New Reply</h6>
