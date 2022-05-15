@@ -47,11 +47,11 @@
                                     <i class="bx bx-dots-vertical-rounded"></i>
                                 </button>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="javascript:void(0);"
+                                    <a class="dropdown-item" href="/note/{{note.slug}}/edit"
                                         ><i class="bx bx-edit-alt me-1"></i> Edit</a
                                     >
                                     <a class="text-danger dropdown-item" href="javascript:void(0);" data-bs-toggle="modal"
-                                        data-bs-target="#confirmDelete">
+                                    data-bs-target="#confirmDelete">
                                         <i class="bx bx-trash me-1"></i> Delete</a
                                     >
                                 </div>
@@ -74,6 +74,33 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Modals -->
+            <div class="modal fade" id="confirmDelete" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="confirmDeleteTitle">Menghapus Note {{note.title}}?</h5>
+                            <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                            ></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Note / Catatan yang dihapus tidak dapat dikembalikan lagi.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                                Batal
+                            </button>
+                            <a href="/note/{{note.slug}}/delete" class="btn btn-primary">Ya, Hapus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end Modals -->
             {% else %}
             <div class="col-12">
                 <div class="card">
