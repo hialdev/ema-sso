@@ -100,7 +100,7 @@
             <ul class="menu-sub">
                 <li class="menu-item">
                     <a href="<?= $this->url->get('ticket/active') ?>" class="menu-link">
-                        <div data-i18n="All Categories">Active Ticket <span class="badge badge-center rounded-pill bg-primary ms-2">1</span></div>
+                        <div data-i18n="All Categories">Active Ticket <span class="badge badge-center rounded-pill bg-primary ms-2"><?= $cat ?></span></div>
                     </a>
                 </li>
                 <li class="menu-item">
@@ -219,6 +219,8 @@
 					<!-- Content wrapper -->
 					<div class="content-wrapper">
 						<!-- Content -->
+						<?= $this->flash->output() ?>
+						
 						
 <div class="container-xxl flex-grow-1 container-p-y">
     
@@ -228,6 +230,8 @@
             <form action="">
                 <div class="input-group my-3">
                     <input
+                        name="q"
+                        value="<?= $q ?>"
                         type="text"
                         class="form-control border-0"
                         placeholder="Search your problem.."
@@ -238,39 +242,27 @@
                 </div>
             </form>
         </div>
+        <?php $v146260222752340137781iterated = false; ?><?php foreach ($blogs as $blog) { ?><?php $v146260222752340137781iterated = true; ?>
         <div class="col-12 col-md-6 col-lg-4">
             <div class="card mb-4">
                 <div class="card-body">
-                    <a href="<?= $this->url->get('knowladge/knowladge-dummy') ?>" class="text-dark text-decoration-none d-block">
-                        <img src="/assets/img/backgrounds/18.jpg" alt="img-project" class="mb-3 d-block w-100 rounded">
-                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae unde saepe culpa laudantium ratione iste perspiciatis itaque accusantium beatae expedita, explicabo dolore inventore eius necessitatibus velit quidem sapiente autem officiis.</p>
+                    <a href="/knowladge/<?= $blog->slug ?>" class="text-dark text-decoration-none d-block">
+                        <img src="<?= $blog->image ?>" alt="<?= $blog->title ?> image" class="mb-3 d-block w-100 rounded">
+                        <h4><?= $blog->title ?></h4>
+                        <p><?= $blog->excerpt ?></p>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="card mb-4">
-                <div class="card-body">
-                    <a href="<?= $this->url->get('knowladge/knowladge-dummy') ?>" class="text-dark text-decoration-none d-block">
-                        <img src="/assets/img/backgrounds/18.jpg" alt="img-project" class="mb-3 d-block w-100 rounded">
-                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae unde saepe culpa laudantium ratione iste perspiciatis itaque accusantium beatae expedita, explicabo dolore inventore eius necessitatibus velit quidem sapiente autem officiis.</p>
-                    </a>
+        <?php } if (!$v146260222752340137781iterated) { ?>
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body text-center">
+                    Belum ada data knowladges.
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="card mb-4">
-                <div class="card-body">
-                    <a href="<?= $this->url->get('knowladge/knowladge-dummy') ?>" class="text-dark text-decoration-none d-block">
-                        <img src="/assets/img/backgrounds/18.jpg" alt="img-project" class="mb-3 d-block w-100 rounded">
-                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae unde saepe culpa laudantium ratione iste perspiciatis itaque accusantium beatae expedita, explicabo dolore inventore eius necessitatibus velit quidem sapiente autem officiis.</p>
-                    </a>
-                </div>
-            </div>
-        </div>
+        <?php } ?>
     </div>
 </div>
 
@@ -326,6 +318,8 @@
 		<!-- Vendors JS -->
 		<script src="/assets/vendor/libs/apex-charts/apexcharts.js"></script>
 		<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+		
+		
 
 		<!-- Main JS -->
 		<script src="/assets/js/main.js"></script>

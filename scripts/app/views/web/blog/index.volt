@@ -9,6 +9,8 @@
             <form action="">
                 <div class="input-group my-3">
                     <input
+                        name="q"
+                        value="{{q}}"
                         type="text"
                         class="form-control border-0"
                         placeholder="Search your problem.."
@@ -19,39 +21,27 @@
                 </div>
             </form>
         </div>
+        {% for blog in blogs %}
         <div class="col-12 col-md-6 col-lg-4">
             <div class="card mb-4">
                 <div class="card-body">
-                    <a href="{{url('knowladge/knowladge-dummy')}}" class="text-dark text-decoration-none d-block">
-                        <img src="/assets/img/backgrounds/18.jpg" alt="img-project" class="mb-3 d-block w-100 rounded">
-                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae unde saepe culpa laudantium ratione iste perspiciatis itaque accusantium beatae expedita, explicabo dolore inventore eius necessitatibus velit quidem sapiente autem officiis.</p>
+                    <a href="/knowladge/{{blog.slug}}" class="text-dark text-decoration-none d-block">
+                        <img src="{{blog.image}}" alt="{{blog.title}} image" class="mb-3 d-block w-100 rounded">
+                        <h4>{{blog.title}}</h4>
+                        <p>{{blog.excerpt}}</p>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="card mb-4">
-                <div class="card-body">
-                    <a href="{{url('knowladge/knowladge-dummy')}}" class="text-dark text-decoration-none d-block">
-                        <img src="/assets/img/backgrounds/18.jpg" alt="img-project" class="mb-3 d-block w-100 rounded">
-                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae unde saepe culpa laudantium ratione iste perspiciatis itaque accusantium beatae expedita, explicabo dolore inventore eius necessitatibus velit quidem sapiente autem officiis.</p>
-                    </a>
+        {% else %}
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body text-center">
+                    Belum ada data knowladges.
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="card mb-4">
-                <div class="card-body">
-                    <a href="{{url('knowladge/knowladge-dummy')}}" class="text-dark text-decoration-none d-block">
-                        <img src="/assets/img/backgrounds/18.jpg" alt="img-project" class="mb-3 d-block w-100 rounded">
-                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae unde saepe culpa laudantium ratione iste perspiciatis itaque accusantium beatae expedita, explicabo dolore inventore eius necessitatibus velit quidem sapiente autem officiis.</p>
-                    </a>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}

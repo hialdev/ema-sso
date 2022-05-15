@@ -222,134 +222,35 @@
 						<?= $this->flash->output() ?>
 						
 						
-<div class="container-xxl flex-grow-1 container-p-y">
-    <div class="row">
-        <div class="col-6 mb-4">
-            <div class="card">
-                <div class="card-body">
-                    <div class="card-title d-flex align-items-start justify-content-between">
-                        <div class="avatar flex-shrink-0">
-                            <div class="p-2 rounded d-inline-flex align-items-center justify-content-center bg-primary text-white">
-                                <span class="iconify" data-icon="ic:round-work" style="width: 1.4em;height:1.4em"></span>
-                            </div>
-                        </div>
-                        <div class="dropdown">
-                            <button
-                                class="btn p-0"
-                                type="button"
-                                id="cardOpt4"
-                                data-bs-toggle="dropdown"
-                                aria-haspopup="true"
-                                aria-expanded="false"
-                            >
-                                <i class="bx bx-dots-vertical-rounded"></i>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt4">
-                                <a class="dropdown-item" href="<?= $this->url->get('project') ?>">View</a>
-                                <a class="dropdown-item" href="https://wa.me/6289671052050">Add New</a>
-                            </div>
-                        </div>
-                    </div>
-                    <span class="d-block mb-1">Projects</span>
-                    <h3 class="card-title text-nowrap mb-2 fw-bolder fs-1"><?= $count['project'] ?></h3>
-                </div>
-            </div>
-        </div>
-        <div class="col-6 mb-4">
-            <div class="card">
-                <div class="card-body">
-                    <div class="card-title d-flex align-items-start justify-content-between">
-                        <div class="avatar flex-shrink-0">
-                            <div class="p-2 rounded d-inline-flex align-items-center justify-content-center bg-primary text-white">
-                                <span class="iconify" data-icon="ion:ticket" style="width: 1.4em;height:1.4em"></span>
-                            </div>
-                        </div>
-                        <div class="dropdown">
-                            <button
-                                class="btn p-0"
-                                type="button"
-                                id="cardOpt4"
-                                data-bs-toggle="dropdown"
-                                aria-haspopup="true"
-                                aria-expanded="false"
-                            >
-                                <i class="bx bx-dots-vertical-rounded"></i>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt4">
-                                <a class="dropdown-item" href="<?= $this->url->get('ticket/active') ?>">Active Ticket <span class="badge badge-center rounded-pill bg-primary ms-2">1</span></a>
-                                <a class="dropdown-item" href="<?= $this->url->get('ticket/add') ?>">Add New</a>
-                            </div>
-                        </div>
-                    </div>
-                    <span class="d-block mb-1">Ticket</span>
-                    <h3 class="card-title text-nowrap mb-2 fw-bolder fs-1"><?= $count['ticket'] ?></h3>
-                </div>
-            </div>
-        </div>
 
-    </div>
+<div class="container-xxl flex-grow-1 container-p-y">
+                    
     <div class="py-3">
-        <h4># Your Ticket</h4>
-        <div class="card">
-            <div class="table-responsive text-nowrap">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Subject</th>
-                            <th>Project</th>
-                            <th>Priority</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody class="table-border-bottom-0">
-                       <?php foreach ($tickets as $ticket) { ?>
-                        <tr>
-                            <td class="border-0"><strong><?= $ticket->no ?></strong></td>
-                            <td class="border-0">
-                                <?= $ticket->subject ?>
-                                <br>
-                                <span class="text-secondary" style="font-size: 12px;"><?= $ticket->created ?></span>
-                            </td class="border-0">
-                            <td class="border-0"><?= $ticket->getProject()->name ?></td>
-                            <td class="border-0">
-                                <?php if ($ticket->status === '1') { ?>
-                                    <span class="badge bg-label-secondary">Low</span>
-                                <?php } elseif ($ticket->status === '2') { ?>
-                                    <span class="badge bg-label-info">Medium</span>
-                                <?php } elseif ($ticket->status === '3') { ?>
-                                    <span class="badge bg-label-danger">High</span>
-                                <?php } ?>
-                            </td>
-                            <td class="border-0">
-                                <?php if ($ticket->status === '1') { ?>
-                                    <span class="badge bg-label-secondary">Waiting</span>
-                                <?php } elseif ($ticket->status === '2') { ?>
-                                    <span class="badge bg-label-info">Answered</span>
-                                <?php } elseif ($ticket->status === '3') { ?>
-                                    <span class="badge bg-label-success">Completed</span>
-                                <?php } ?> 
-                            </td>
-                            <td class="border-0"><a href="/ticket/v/<?= $ticket->slug ?>" class="btn btn-primary">View</a></td>
-                        </tr>
-                        <tr>
-                            <td colspan="10">
-                                <div class="card bg-light">
-                                    <div class="card-header bg-label-secondary py-1">
-                                        Latest Reply
-                                    </div>
-                                    <div class="card-body py-3">
-                                        <p style="word-wrap: break-word;white-space: normal;"><?= $ticket->getChat()->getLast()->content ?></p>
-                                        <h6>- <?= $ticket->getChat()->getLast()->getAccount()->name ?></h6>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <?php } ?>
-                    </tbody>
-                </table>
+        <h4># Edit Note</h4>
+        <form method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="subject" class="form-label">Title</label>
+                <input type="text" name="title" id="subject" placeholder="Title" class="form-control" value="<?= $note->title ?>" required>
             </div>
-        </div>
+            <div class="mb-3">
+                <label for="project" class="form-label">Project</label>
+                <select name="project_id" id="project" class="form-select" required>
+                    <option>-- Pilih Project --</option>
+                    <?php foreach ($projects as $project) { ?>
+                        <option value="<?= $project->id ?>" <?= ($project->id === $note->Project->id ? 'selected' : '') ?>><?= $project->name ?></option>
+                    <?php } ?>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="note" class="form-label">Note</label>
+                <textarea name="note" id="note" cols="30" rows="10" class="form-control"><?= $note->note ?></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="file" class="form-label">Lampiran (multiple)</label>
+                <input type="file" name="file" id="file" class="form-control" multiple="multiple">
+            </div>
+            <button type="submit" class="btn btn-primary d-flex align-items-center justify-content-center gap-2 w-100">Save Note <span class="iconify" data-icon="eva:file-add-fill"></span></button>
+        </form>
     </div>
 </div>
 
@@ -406,7 +307,17 @@
 		<script src="/assets/vendor/libs/apex-charts/apexcharts.js"></script>
 		<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
 		
-		
+<script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#note' ),{
+            toolbar: [ 'heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote' ],
+        } )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>
+
 
 		<!-- Main JS -->
 		<script src="/assets/js/main.js"></script>

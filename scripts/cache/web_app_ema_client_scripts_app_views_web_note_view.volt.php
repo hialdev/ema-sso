@@ -100,7 +100,7 @@
             <ul class="menu-sub">
                 <li class="menu-item">
                     <a href="<?= $this->url->get('ticket/active') ?>" class="menu-link">
-                        <div data-i18n="All Categories">Active Ticket <span class="badge badge-center rounded-pill bg-primary ms-2">1</span></div>
+                        <div data-i18n="All Categories">Active Ticket <span class="badge badge-center rounded-pill bg-primary ms-2"><?= $cat ?></span></div>
                     </a>
                 </li>
                 <li class="menu-item">
@@ -121,7 +121,7 @@
             <span class="menu-header-text">Documentation</span>
         </li>
 
-        <li class="menu-item <?= ($uri === '/note*' ? 'active' : '') ?>">
+        <li class="menu-item <?= ($uri === 'note' ? 'active' : '') ?>">
             <a href="" class="menu-link menu-toggle">
                 <span class="iconify menu-icon" data-icon="ic:round-sticky-note-2"></span>
                 <div data-i18n="Notes">Notes</div>
@@ -325,6 +325,8 @@
 		<!-- Vendors JS -->
 		<script src="/assets/vendor/libs/apex-charts/apexcharts.js"></script>
 		<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+		
+		
 
 		<!-- Main JS -->
 		<script src="/assets/js/main.js"></script>

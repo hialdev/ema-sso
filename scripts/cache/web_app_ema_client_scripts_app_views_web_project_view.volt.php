@@ -219,6 +219,8 @@
 					<!-- Content wrapper -->
 					<div class="content-wrapper">
 						<!-- Content -->
+						<?= $this->flash->output() ?>
+						
 						
 <div class="container-xxl flex-grow-1 container-p-y">  
     <div class="py-3">
@@ -287,17 +289,33 @@
                 </div>
             </div>
             <div class="col-12">
-                <h4># Active Ticket <span class="badge badge-center rounded-pill bg-primary ms-2">2</span></h4>
+                <h4># Active Ticket <?= $project->name ?><span class="badge badge-center rounded-pill bg-primary ms-2"><?= $count ?></span></h4>
                 <form action="">
-                    <div class="input-group my-3">
-                        <input
+                    <input
+                        name="q"
+                        value = "<?= $query['q'] ?>"
                         type="text"
-                        class="form-control border-0"
-                        placeholder="Search Ticket... ( Can be INV, Subject, Priority, Status )"
-                        aria-label="Search Ticket... ( Can be INV, Subject, Priority, Status )"
+                        class="form-control border-0 mb-2"
+                        placeholder="Search No Ticket without #"
+                        aria-label="Search No Ticket without #"
                         aria-describedby="button-addon2"
-                        />
-                        <button class="btn btn-primary" type="button" id="button-addon2"><span class="iconify" data-icon="fe:search"></span></button>
+                    />
+                    <div class="d-flex flex-column flex-md-row align-items-center gap-3 justify-content-between mb-3">
+                        <div class="d-flex gap-2">
+                            <select name="priority" id="priority" class="form-select border-0">
+                                <option value="0">All Priority</option>
+                                <?php foreach ($opt['p'] as $o) { ?>
+                                    <option value="<?= $o->id ?>" <?= ($o->id === $query['p'] ? 'selected' : '') ?> ><?= $o->name ?></option>
+                                <?php } ?>
+                            </select>
+                            <select name="status" id="status" class="form-select border-0">
+                                <option value="0">All Status</option>
+                                <?php foreach ($opt['s'] as $o) { ?>
+                                <option value="<?= $o->id ?>" <?= ($o->id === $query['s'] ? 'selected' : '') ?> ><?= $o->name ?></option>
+                                <?php } ?>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary" type="submit" id="button-addon2"><span class="iconify me-2" data-icon="fe:search"></span>Terapkan / Cari</button>
                     </div>
                 </form>
 
@@ -313,16 +331,22 @@
                                 </tr>
                             </thead>
                             <tbody class="table-border-bottom-0">
+                                <?php $v161760282364944569681iterated = false; ?><?php foreach ($tickets as $ticket) { ?><?php $v161760282364944569681iterated = true; ?>
                                 <tr>
-                                    <td class="border-0"><strong>TICEMA675243</strong></td>
+                                    <td class="border-0"><strong><?= $ticket->no ?></strong></td>
                                     <td class="border-0">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sunt, corporis molestias.
+                                        <?= $ticket->subject ?>
                                         <br>
-                                        <span class="text-secondary" style="font-size: 12px;">08/02/21, 14:23 WIB</span>
+                                        <span class="text-secondary" style="font-size: 12px;"><?= $ticket->created ?></span>
                                     </td class="border-0">
-                                    <td class="border-0"><span class="badge bg-label-danger">High</span></td>
-                                    <td class="border-0"><span class="badge bg-label-info me-1">Answered</span></td>
-                                    <td class="border-0"><a href="<?= $this->url->get('ticket/v/ticket-dummy') ?>" class="btn btn-primary">View</a></td>
+                                    <td class="border-0"><?= $ticket->Project->name ?></td>
+                                    <td class="border-0">
+                                        <span class="badge bg-<?= $ticket->Priority->css ?>"><?= $ticket->Priority->name ?></span>
+                                    </td>
+                                    <td class="border-0">
+                                        <span class="badge bg-label-<?= $ticket->Status->css ?>"><?= $ticket->Status->name ?></span>
+                                    </td>
+                                    <td class="border-0"><a href="/ticket/v/<?= $ticket->slug ?>" class="btn btn-primary">View</a></td>
                                 </tr>
                                 <tr>
                                     <td colspan="10">
@@ -331,36 +355,23 @@
                                                 Latest Reply
                                             </div>
                                             <div class="card-body py-3">
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eveniet officia</p>
-                                                <h6>- OM JT</h6>
+                                                <p style="word-wrap: break-word;white-space: normal;"><?= $ticket->getChat()->getLast()->content ?></p>
+                                                <h6>- <?= $ticket->getChat()->getLast()->getAccount()->name ?></h6>
                                             </div>
                                         </div>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td class="border-0"><strong>TICEMA675123</strong></td>
-                                    <td class="border-0">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sunt, corporis molestias.
-                                        <br>
-                                        <span class="text-secondary" style="font-size: 12px;">08/02/21, 14:23 WIB</span>
-                                    </td class="border-0">
-                                    <td class="border-0"><span class="badge bg-label-danger">High</span></td>
-                                    <td class="border-0"><span class="badge bg-label-secondary me-1">Waiting</span></td>
-                                    <td class="border-0"><a href="<?= $this->url->get('ticket/v/ticket-dummy') ?>" class="btn btn-primary">View</a></td>
-                                </tr>
+                                <?php } if (!$v161760282364944569681iterated) { ?>
                                 <tr>
                                     <td colspan="10">
-                                        <div class="card bg-light">
-                                            <div class="card-header bg-label-secondary py-1">
-                                                Latest Reply
-                                            </div>
-                                            <div class="card-body py-3">
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eveniet officia</p>
-                                                <h6>- You</h6>
+                                        <div class="card">
+                                            <div class="card-body text-center">
+                                                Tidak ada ticket untuk ditampilkan, Mohon sesuaikan filter pencarian anda.
                                             </div>
                                         </div>
                                     </td>
                                 </tr>
+                                <?php } ?>
                             </tbody>
                         </table>
                     </div>
@@ -422,6 +433,8 @@
 		<!-- Vendors JS -->
 		<script src="/assets/vendor/libs/apex-charts/apexcharts.js"></script>
 		<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+		
+		
 
 		<!-- Main JS -->
 		<script src="/assets/js/main.js"></script>

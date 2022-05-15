@@ -219,6 +219,8 @@
 					<!-- Content wrapper -->
 					<div class="content-wrapper">
 						<!-- Content -->
+						<?= $this->flash->output() ?>
+						
 						
 <div class="container-xxl flex-grow-1 container-p-y">
                     
@@ -230,8 +232,8 @@
                 value = "<?= $query['q'] ?>"
                 type="text"
                 class="form-control border-0 mb-2"
-                placeholder="Search No Ticket without #"
-                aria-label="Search No Ticket without #"
+                placeholder="Search No Ticket"
+                aria-label="Search No Ticket"
                 aria-describedby="button-addon2"
             />
             <div class="d-flex flex-column flex-md-row align-items-center gap-3 justify-content-between mb-3">
@@ -266,7 +268,7 @@
                         </tr>
                     </thead>
                     <tbody class="table-border-bottom-0">
-                        <?php foreach ($tickets as $ticket) { ?>
+                        <?php $v114822101805225665501iterated = false; ?><?php foreach ($tickets as $ticket) { ?><?php $v114822101805225665501iterated = true; ?>
                         <tr>
                             <td class="border-0"><strong><?= $ticket->no ?></strong></td>
                             <td class="border-0">
@@ -292,6 +294,16 @@
                                     <div class="card-body py-3">
                                         <p style="word-wrap: break-word;white-space: normal;"><?= $ticket->getChat()->getLast()->content ?></p>
                                         <h6>- <?= $ticket->getChat()->getLast()->getAccount()->name ?></h6>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <?php } if (!$v114822101805225665501iterated) { ?>
+                        <tr>
+                            <td colspan="10">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        Tidak ada ticket untuk ditampilkan, Mohon sesuaikan filter pencarian anda.
                                     </div>
                                 </div>
                             </td>
@@ -356,6 +368,8 @@
 		<!-- Vendors JS -->
 		<script src="/assets/vendor/libs/apex-charts/apexcharts.js"></script>
 		<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+		
+		
 
 		<!-- Main JS -->
 		<script src="/assets/js/main.js"></script>

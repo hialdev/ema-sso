@@ -100,7 +100,7 @@
             <ul class="menu-sub">
                 <li class="menu-item">
                     <a href="<?= $this->url->get('ticket/active') ?>" class="menu-link">
-                        <div data-i18n="All Categories">Active Ticket <span class="badge badge-center rounded-pill bg-primary ms-2">1</span></div>
+                        <div data-i18n="All Categories">Active Ticket <span class="badge badge-center rounded-pill bg-primary ms-2"><?= $cat ?></span></div>
                     </a>
                 </li>
                 <li class="menu-item">
@@ -219,42 +219,34 @@
 					<!-- Content wrapper -->
 					<div class="content-wrapper">
 						<!-- Content -->
+						<?= $this->flash->output() ?>
+						
 						
 <div class="container-xxl flex-grow-1 container-p-y">
                     
     <div class="py-3">
         <h2># Select Project</h2>
         <div class="row">
+            <?php $v181208320530761152681iterated = false; ?><?php foreach ($projects as $project) { ?><?php $v181208320530761152681iterated = true; ?>
             <div class="col-6 col-md-6 col-lg-4">
                 <div class="card mb-4">
                     <div class="card-body">
-                        <a href="<?= $this->url->get('note/p/project-1') ?>" class="text-dark text-decoration-none d-block">
-                            <img src="./assets/img/backgrounds/18.jpg" alt="img-project" class="mb-3 d-block w-100 rounded">
-                            <h4>Project Name</h4>
+                        <a href="/note/p/<?= $project->slug ?>" class="text-dark text-decoration-none d-block">
+                            <img src="<?= $project->image ?>" alt="img-project" class="mb-3 d-block w-100 rounded">
+                            <h4><?= $project->name ?></h4>
                         </a>
                     </div>
                 </div>
             </div>
-            <div class="col-6 col-md-6 col-lg-4">
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <a href="<?= $this->url->get('note/p/project-1') ?>" class="text-dark text-decoration-none d-block">
-                            <img src="./assets/img/backgrounds/18.jpg" alt="img-project" class="mb-3 d-block w-100 rounded">
-                            <h4>Project Name</h4>
-                        </a>
+            <?php } if (!$v181208320530761152681iterated) { ?>
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body text-center">
+                        Belum ada project untuk anda.
                     </div>
                 </div>
             </div>
-            <div class="col-6 col-md-6 col-lg-4">
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <a href="<?= $this->url->get('note/p/project-1') ?>" class="text-dark text-decoration-none d-block">
-                            <img src="./assets/img/backgrounds/18.jpg" alt="img-project" class="mb-3 d-block w-100 rounded">
-                            <h4>Project Name</h4>
-                        </a>
-                    </div>
-                </div>
-            </div>
+            <?php } ?>
         </div>
         <h4># Discover Notes</h4>
         <div class="row">
@@ -262,172 +254,95 @@
                 <form action="">
                     <div class="input-group my-3">
                         <input
+                            name = "q"
                             type="text"
+                            value = "<?= $q ?>"
                             class="form-control border-0"
-                            placeholder="Search Note..."
-                            aria-label="Search Note..."
+                            placeholder="Search Title Note..."
+                            aria-label="Search Title Note..."
                             aria-describedby="button-addon2"
                         />
-                        <button class="btn btn-primary" type="button" id="button-addon2"><span class="iconify" data-icon="fe:search"></span></button>
+                        <button class="btn btn-primary" type="submit" id="button-addon2"><span class="iconify" data-icon="fe:search"></span></button>
                     </div>
                 </form>
             </div>
+            <?php $v181208320530761152681iterated = false; ?><?php foreach ($notes as $note) { ?><?php $v181208320530761152681iterated = true; ?>
             <div class="col-12 col-lg-6">
                 <div class="card mb-4">
                     <div class="card-body">
                         <div class="d-flex justify-content-between gap-2">
                             <div>
-                                Project : <strong>Project 1</strong>
-                                <br><span style="font-size:10px">Kam, 08 Mei 22 - 18:32 WIB last modified with <strong>User1</strong></span>
+                                Project : <strong><?= $note->Project->name ?></strong>
+                                <br><span style="font-size:10px"><?= $note->modified ?> WIB last modified with <strong><?= $note->Modifer->name ?></strong></span>
                             </div>
                             <div class="dropdown">
                                 <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
                                     <i class="bx bx-dots-vertical-rounded"></i>
                                 </button>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="javascript:void(0);"
+                                    <a class="dropdown-item" href="/note/<?= $note->slug ?>/edit"
                                         ><i class="bx bx-edit-alt me-1"></i> Edit</a
                                     >
                                     <a class="text-danger dropdown-item" href="javascript:void(0);" data-bs-toggle="modal"
-                                        data-bs-target="#confirmDelete">
+                                    data-bs-target="#confirmDelete">
                                         <i class="bx bx-trash me-1"></i> Delete</a
                                     >
                                 </div>
                             </div>
                         </div>
                         <hr>
-                        <a href="<?= $this->url->get('note/v/catatan-pertama-testing') ?>" class="d-block text-dark">
-                            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt possimus beatae accusamus corrupti cum magni? Placeat maxime earum unde enim, et doloribus! Corrupti, doloremque. Suscipit sit nostrum nulla modi nemo?</h4>
+                        <a href="/note/v/<?= $note->slug ?>" class="d-block text-dark">
+                            <h4><?= $note->title ?></h4>
                             <div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium inventore, nam veniam et labore fuga ducimus nihil nobis repudiandae. Repellat iste dolore quasi magnam expedita, doloribus ea eos nulla est?
-                                Reprehenderit culpa repudiandae ea quo maxime harum voluptatibus rem repellat ab, beatae impedit! Iure quaerat recusandae non est voluptates minima, eveniet amet asperiores ducimus molestias, iste reiciendis aspernatur natus fugiat!
-                                Aspernatur assumenda autem tenetur pariatur quam nesciunt, ipsa, in possimus esse facere tempore dolorem suscipit inventore sunt. Veniam, recusandae vel, tempora nemo eius, sequi dolores quo repellendus libero suscipit omnis?
-                                Quasi ipsum blanditiis praesentium voluptatum repellendus dolor inventore voluptas exercitationem sunt expedita molestias amet, minus ipsam eos repudiandae natus nostrum architecto eveniet, aliquid ut quae, porro in. Harum, dolores vel.
-                                Corrupti, dicta cumque. Eos laboriosam ab deserunt eaque perferendis vel voluptates odit harum beatae atque aperiam quaerat laborum voluptatum, natus at officia perspiciatis quia placeat repudiandae, non expedita nobis sint.</p>
+                                <?= $note->note ?>
                             </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-6">
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between gap-2">
-                            <div>
-                                Project : <strong>Project 1</strong>
-                                <br><span style="font-size:10px">Kam, 08 Mei 22 - 18:32 WIB last modified with <strong>User1</strong></span>
-                            </div>
-                            <div class="dropdown">
-                                <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                                    <i class="bx bx-dots-vertical-rounded"></i>
-                                </button>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="javascript:void(0);"
-                                        ><i class="bx bx-edit-alt me-1"></i> Edit</a
-                                    >
-                                    <a class="text-danger dropdown-item" href="javascript:void(0);" data-bs-toggle="modal"
-                                        data-bs-target="#confirmDelete">
-                                        <i class="bx bx-trash me-1"></i> Delete</a
-                                    >
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
-                        <a href="<?= $this->url->get('note/v/catatan-pertama-testing') ?>" class="d-block text-dark">
-                            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt possimus beatae accusamus corrupti cum magni? Placeat maxime earum unde enim, et doloribus! Corrupti, doloremque. Suscipit sit nostrum nulla modi nemo?</h4>
-                            <div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium inventore, nam veniam et labore fuga ducimus nihil nobis repudiandae. Repellat iste dolore quasi magnam expedita, doloribus ea eos nulla est?
-                                Reprehenderit culpa repudiandae ea quo maxime harum voluptatibus rem repellat ab, beatae impedit! Iure quaerat recusandae non est voluptates minima, eveniet amet asperiores ducimus molestias, iste reiciendis aspernatur natus fugiat!
-                                Aspernatur assumenda autem tenetur pariatur quam nesciunt, ipsa, in possimus esse facere tempore dolorem suscipit inventore sunt. Veniam, recusandae vel, tempora nemo eius, sequi dolores quo repellendus libero suscipit omnis?
-                                Quasi ipsum blanditiis praesentium voluptatum repellendus dolor inventore voluptas exercitationem sunt expedita molestias amet, minus ipsam eos repudiandae natus nostrum architecto eveniet, aliquid ut quae, porro in. Harum, dolores vel.
-                                Corrupti, dicta cumque. Eos laboriosam ab deserunt eaque perferendis vel voluptates odit harum beatae atque aperiam quaerat laborum voluptatum, natus at officia perspiciatis quia placeat repudiandae, non expedita nobis sint.</p>
-                            </div>
+                            <?php if ($note->file !== null) { ?>
                             <div class="d-flex flex-wrap gap-2">
-                                <a href="" class="d-inline-flex align-items-center gap-2 bg-label-secondary p-2 rounded"><span class="iconify" data-icon="bi:file-earmark-fill"></span>Namafile.jpg</a>
-                                <a href="" class="d-inline-flex align-items-center gap-2 bg-label-secondary p-2 rounded"><span class="iconify" data-icon="bi:file-earmark-fill"></span>Namafile.jpg</a>
+                                <?php foreach ($note->files($note) as $key => $path) { ?>
+                                    <a href="<?= $path ?>" class="d-inline-flex align-items-center gap-2 bg-label-secondary p-2 rounded"><span class="iconify" data-icon="bi:file-earmark-fill"></span><?= $key ?></a>
+                                <?php } ?>
                             </div>
+                            <?php } ?>
                         </a>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-6">
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between gap-2">
-                            <div>
-                                Project : <strong>Project 1</strong>
-                                <br><span style="font-size:10px">Kam, 08 Mei 22 - 18:32 WIB last modified with <strong>User1</strong></span>
-                            </div>
-                            <div class="dropdown">
-                                <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                                    <i class="bx bx-dots-vertical-rounded"></i>
-                                </button>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="javascript:void(0);"
-                                        ><i class="bx bx-edit-alt me-1"></i> Edit</a
-                                    >
-                                    <a class="text-danger dropdown-item" href="javascript:void(0);" data-bs-toggle="modal"
-                                        data-bs-target="#confirmDelete">
-                                        <i class="bx bx-trash me-1"></i> Delete</a
-                                    >
-                                </div>
-                            </div>
+
+            <!-- Modals -->
+            <div class="modal fade" id="confirmDelete" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="confirmDeleteTitle">Menghapus Note <?= $note->title ?>?</h5>
+                            <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                            ></button>
                         </div>
-                        <hr>
-                        <a href="<?= $this->url->get('note/v/catatan-pertama-testing') ?>" class="d-block text-dark">
-                            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt possimus beatae accusamus corrupti cum magni? Placeat maxime earum unde enim, et doloribus! Corrupti, doloremque. Suscipit sit nostrum nulla modi nemo?</h4>
-                            <div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium inventore, nam veniam et labore fuga ducimus nihil nobis repudiandae. Repellat iste dolore quasi magnam expedita, doloribus ea eos nulla est?
-                                Reprehenderit culpa repudiandae ea quo maxime harum voluptatibus rem repellat ab, beatae impedit! Iure quaerat recusandae non est voluptates minima, eveniet amet asperiores ducimus molestias, iste reiciendis aspernatur natus fugiat!
-                                Aspernatur assumenda autem tenetur pariatur quam nesciunt, ipsa, in possimus esse facere tempore dolorem suscipit inventore sunt. Veniam, recusandae vel, tempora nemo eius, sequi dolores quo repellendus libero suscipit omnis?
-                                Quasi ipsum blanditiis praesentium voluptatum repellendus dolor inventore voluptas exercitationem sunt expedita molestias amet, minus ipsam eos repudiandae natus nostrum architecto eveniet, aliquid ut quae, porro in. Harum, dolores vel.
-                                Corrupti, dicta cumque. Eos laboriosam ab deserunt eaque perferendis vel voluptates odit harum beatae atque aperiam quaerat laborum voluptatum, natus at officia perspiciatis quia placeat repudiandae, non expedita nobis sint.</p>
-                            </div>
-                            <div class="d-flex flex-wrap gap-2">
-                                <a href="" class="d-inline-flex align-items-center gap-2 bg-label-secondary p-2 rounded"><span class="iconify" data-icon="bi:file-earmark-fill"></span>Namafile.jpg</a>
-                                <a href="" class="d-inline-flex align-items-center gap-2 bg-label-secondary p-2 rounded"><span class="iconify" data-icon="bi:file-earmark-fill"></span>Namafile.jpg</a>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-6">
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between gap-2">
-                            <div>
-                                Project : <strong>Project 1</strong>
-                                <br><span style="font-size:10px">Kam, 08 Mei 22 - 18:32 WIB last modified with <strong>User1</strong></span>
-                            </div>
-                            <div class="dropdown">
-                                <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                                    <i class="bx bx-dots-vertical-rounded"></i>
-                                </button>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="javascript:void(0);"
-                                        ><i class="bx bx-edit-alt me-1"></i> Edit</a
-                                    >
-                                    <a class="text-danger dropdown-item" href="javascript:void(0);" data-bs-toggle="modal"
-                                        data-bs-target="#confirmDelete">
-                                        <i class="bx bx-trash me-1"></i> Delete</a
-                                    >
-                                </div>
-                            </div>
+                        <div class="modal-body">
+                            <p>Note / Catatan yang dihapus tidak dapat dikembalikan lagi.</p>
                         </div>
-                        <hr>
-                        <a href="<?= $this->url->get('note/v/catatan-pertama-testing') ?>" class="d-block text-dark">
-                            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt possimus beatae accusamus corrupti cum magni? Placeat maxime earum unde enim, et doloribus! Corrupti, doloremque. Suscipit sit nostrum nulla modi nemo?</h4>
-                            <div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium inventore, nam veniam et labore fuga ducimus nihil nobis repudiandae. Repellat iste dolore quasi magnam expedita, doloribus ea eos nulla est?
-                                Reprehenderit culpa repudiandae ea quo maxime harum voluptatibus rem repellat ab, beatae impedit! Iure quaerat recusandae non est voluptates minima, eveniet amet asperiores ducimus molestias, iste reiciendis aspernatur natus fugiat!
-                                Aspernatur assumenda autem tenetur pariatur quam nesciunt, ipsa, in possimus esse facere tempore dolorem suscipit inventore sunt. Veniam, recusandae vel, tempora nemo eius, sequi dolores quo repellendus libero suscipit omnis?
-                                Quasi ipsum blanditiis praesentium voluptatum repellendus dolor inventore voluptas exercitationem sunt expedita molestias amet, minus ipsam eos repudiandae natus nostrum architecto eveniet, aliquid ut quae, porro in. Harum, dolores vel.
-                                Corrupti, dicta cumque. Eos laboriosam ab deserunt eaque perferendis vel voluptates odit harum beatae atque aperiam quaerat laborum voluptatum, natus at officia perspiciatis quia placeat repudiandae, non expedita nobis sint.</p>
-                            </div>
-                        </a>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                                Batal
+                            </button>
+                            <a href="/note/<?= $note->slug ?>/delete" class="btn btn-primary">Ya, Hapus</a>
+                        </div>
                     </div>
                 </div>
             </div>
+            <!-- end Modals -->
+            <?php } if (!$v181208320530761152681iterated) { ?>
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body text-center">
+                        Tidak ada data note untuk ditampilkan.
+                    </div>
+                </div>
+            </div>
+            <?php } ?>
         </div>
     </div>
 </div>
@@ -484,6 +399,8 @@
 		<!-- Vendors JS -->
 		<script src="/assets/vendor/libs/apex-charts/apexcharts.js"></script>
 		<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+		
+		
 
 		<!-- Main JS -->
 		<script src="/assets/js/main.js"></script>

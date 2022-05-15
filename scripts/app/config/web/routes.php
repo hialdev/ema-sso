@@ -26,11 +26,19 @@ $router->add(
         'action'    => 'index',
     ]
 );
-$router->add(
+$router->addGet(
     '/ticket/v/([a-zA-Z0-9\_\-]+)',
     [
         'controller'=> 'Ticket',
         'action'    => 'view',
+        'slug'      => 1,
+    ]
+);
+$router->addPost(
+    '/ticket/v/([a-zA-Z0-9\_\-]+)',
+    [
+        'controller'=> 'Ticket',
+        'action'    => 'open',
         'slug'      => 1,
     ]
 );
@@ -48,9 +56,24 @@ $router->add(
         'action'    => 'add',
     ]
 );
+$router->addPost(
+    '/ticket/add',
+    [
+        'controller'=> 'Ticket',
+        'action'    => 'create',
+    ]
+);
+$router->add(
+    '/ticket/([a-zA-Z0-9\_\-]+)/close',
+    [
+        'controller'=> 'Ticket',
+        'action'    => 'close',
+        'slug'      => 1,
+    ]
+);
  
 /* Note */
-$router->add(
+$router->addGet(
     '/note',
     [
         'controller'=> 'Note',
@@ -73,15 +96,46 @@ $router->add(
         'slug'      => 1,
     ]
 );
-$router->add(
+$router->addGet(
     '/note/add',
     [
         'controller'=> 'Note',
         'action'    => 'add',
     ]
 );
+$router->addPost(
+    '/note/add',
+    [
+        'controller'=> 'Note',
+        'action'    => 'create',
+    ]
+);
+$router->addGet(
+    '/note/([a-zA-Z0-9\_\-]+)/edit',
+    [
+        'controller'=> 'Note',
+        'action'    => 'edit',
+        'slug'      => 1,
+    ]
+);
+$router->addPost(
+    '/note/([a-zA-Z0-9\_\-]+)/edit',
+    [
+        'controller'=> 'Note',
+        'action'    => 'update',
+        'slug'      => 1,
+    ]
+);
+$router->add(
+    '/note/([a-zA-Z0-9\_\-]+)/delete',
+    [
+        'controller'=> 'Note',
+        'action'    => 'delete',
+        'slug'      => 1,
+    ]
+);
 
-/* */
+/* Knowladge */
 $router->add(
     '/knowladge',
     [
@@ -95,78 +149,5 @@ $router->add(
         'controller'=> 'Blog',
         'action'    => 'view',
         'slug'      => 1,
-    ]
-);
-
-$router->add(
-    '/mytask/:params',
-    [
-        'controller'=> 'Task',
-        'action'    => 'MyTask',
-        'param'      => 1,
-    ]
-);
-$router->add(
-    '/task/([a-zA-Z0-9\_\-]+)/:params',
-    [
-        'controller'=> 'Project',
-        'action'    => 'task',
-        'slug'      => 1,
-        'id'        => 2
-    ]
-);
-$router->add(
-    '/p/([a-zA-Z0-9\_\-]+)',
-    [
-        'controller'=> 'Project',
-        'action'    => 'index',
-        'slug'      => 1,
-    ]
-);
-$router->add(
-    '/w/([a-zA-Z0-9\_\-]+)',
-    [
-        'controller'=> 'Workspace',
-        'action'    => 'index',
-        'slug'      => 1,
-    ]
-);
-
-$router->add(
-    '/img/(view|thumb)/([0-9]+)*/:int/:int',
-    [
-        'controller'    => 'Image',
-        'action'        => 1,
-        'id'            => 2,
-        'width'         => 3,
-        'height'        => 4
-    ]
-);
-
-$router->add(
-    '/img/(view|thumb)/([0-9]+)*/:int',
-    [
-        'controller'    => 'Image',
-        'action'        => 1,
-        'id'            => 2,
-        'width'         => 3,
-    ]
-);
-
-$router->add(
-    '/img/(view|thumb|full)/([0-9]+)*',
-    [
-        'controller'    => 'Image',
-        'action'        => 1,
-        'id'            => 2,
-    ]
-);
-
-$router->add(
-    '/f/([0-9]+)*',
-    [
-        'controller'    => 'File',
-        'action'        => 'open',
-        'id'            => 1,
     ]
 );

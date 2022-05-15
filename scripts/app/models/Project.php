@@ -20,12 +20,42 @@ class Project extends BaseModel
             ]
         );
 
+        $this->hasOne(
+            'account_id',
+            Account::class,
+            'id',
+            [
+                'alias'     => 'Account',
+                'reusable'  => true,
+            ]
+        );
+
         $this->hasMany(
             'id',
             Task::class,
             'project_id',
             [
                 'alias'     => 'Tasks',
+                'reusable'  => true,
+            ]
+        );
+
+        $this->hasMany(
+            'id',
+            Ticket::class,
+            'project_id',
+            [
+                'alias'     => 'Tickets',
+                'reusable'  => true,
+            ]
+        );
+
+        $this->hasMany(
+            'id',
+            Note::class,
+            'project_id',
+            [
+                'alias'     => 'Notes',
                 'reusable'  => true,
             ]
         );

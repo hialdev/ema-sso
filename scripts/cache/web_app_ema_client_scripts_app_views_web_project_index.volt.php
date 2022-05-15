@@ -219,6 +219,8 @@
 					<!-- Content wrapper -->
 					<div class="content-wrapper">
 						<!-- Content -->
+						<?= $this->flash->output() ?>
+						
 						
 <div class="container-xxl flex-grow-1 container-p-y">       
     <div class="row py-3">
@@ -324,6 +326,8 @@
 		<!-- Vendors JS -->
 		<script src="/assets/vendor/libs/apex-charts/apexcharts.js"></script>
 		<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+		
+		
 
 		<!-- Main JS -->
 		<script src="/assets/js/main.js"></script>

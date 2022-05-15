@@ -100,7 +100,7 @@
             <ul class="menu-sub">
                 <li class="menu-item">
                     <a href="<?= $this->url->get('ticket/active') ?>" class="menu-link">
-                        <div data-i18n="All Categories">Active Ticket <span class="badge badge-center rounded-pill bg-primary ms-2">1</span></div>
+                        <div data-i18n="All Categories">Active Ticket <span class="badge badge-center rounded-pill bg-primary ms-2"><?= $cat ?></span></div>
                     </a>
                 </li>
                 <li class="menu-item">
@@ -219,50 +219,42 @@
 					<!-- Content wrapper -->
 					<div class="content-wrapper">
 						<!-- Content -->
+						<?= $this->flash->output() ?>
+						
 						
 <div class="container-xxl flex-grow-1 container-p-y">
                     
     <div class="row py-3">
         <div class="col-12">
             <a href="<?= $this->url->get('knowladge') ?>" class="d-inline-flex align-items-center gap-2 mb-3"><span class="iconify fs-2" data-icon="ion:arrow-back-circle"></span> Back to Knowladges</a>
-            <img src="/assets/img/backgrounds/18.jpg" alt="" class="mb-3 d-block w-100 rounded" style="max-height:35em; object-fit:cover">
+            <img src="<?= $blog->image ?>" alt="" class="mb-3 d-block w-100 rounded" style="max-height:35em; object-fit:cover">
         </div>
         <div class="col-12 col-lg-8">
-            <p>Kamis, 08 Mei 2022</p>
-            <h1><?= $slug ?></h1>
+            <p><?= $blog->created ?></p>
+            <h1><?= $blog->title ?></h1>
             <div class="card mt-2 mb-4">
                 <div class="card-body">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem et, minus aliquid voluptates qui eos voluptate culpa minima obcaecati velit eaque asperiores porro ducimus natus, quam cumque perspiciatis debitis mollitia?</p>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit rem vel nam neque, tenetur ut architecto ratione dolorum dignissimos dicta, modi ducimus perspiciatis accusantium, aliquid suscipit distinctio. Nobis, id ipsum.
-                        Iste quaerat architecto fugit, reiciendis at, perferendis, ducimus ipsum sit quasi ab debitis praesentium ullam minima! Tenetur rem, expedita asperiores omnis odio cumque placeat harum, eveniet est odit doloremque accusamus.
-                        Assumenda, consectetur quos? Consequatur totam dolorum error quibusdam suscipit amet architecto harum alias porro, quos eius minus nemo, illo vitae id labore neque. Aliquam magnam vel provident repudiandae aut unde.
-                        Aliquam, delectus. In iste cumque odio pariatur ad laboriosam provident, asperiores vitae, sunt sint doloremque mollitia consectetur facilis magnam. Dolores illum consequatur, adipisci officia magnam facilis quaerat harum voluptatem amet.
-                    </p>
+                    <?= $blog->content ?>
                 </div>
             </div>
         </div>
+        <?php if ($blogs !== null) { ?>
         <div class="col-12 col-lg-4">
             <div class="card">
                 <div class="card-body">
                     <h5># See Other</h5>
                     <div class="list-group">
-                        <a href="<?= $this->url->get('knowladge/knowladge-dummy') ?>" class="list-group-item list-group-item-action d-flex gap-2 align-items-center">
-                            <img src="/assets/img/backgrounds/18.jpg" alt="" class="d-block rounded" style="width: 10em;height: 5em;object-fit: cover;">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        <?php foreach ($blogs as $b) { ?>
+                        <a href="/knowladge/<?= $b->slug ?>" class="list-group-item list-group-item-action d-flex gap-2 align-items-center">
+                            <img src="<?= $b->image ?>" alt="<?= $b->title ?> image" class="d-block rounded" style="width: 10em;height: 5em;object-fit: cover;">
+                            <?= $b->title ?>
                         </a>
-                        <a href="<?= $this->url->get('knowladge/knowladge-dummy') ?>" class="list-group-item list-group-item-action d-flex gap-2 align-items-center">
-                            <img src="/assets/img/backgrounds/18.jpg" alt="" class="d-block rounded" style="width: 10em;height: 5em;object-fit: cover;">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                        </a>
-                        <a href="<?= $this->url->get('knowladge/knowladge-dummy') ?>" class="list-group-item list-group-item-action d-flex gap-2 align-items-center">
-                            <img src="/assets/img/backgrounds/18.jpg" alt="" class="d-block rounded" style="width: 10em;height: 5em;object-fit: cover;">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                        </a>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
         </div>
+        <?php } ?>
     </div>
 </div>
 
@@ -318,6 +310,8 @@
 		<!-- Vendors JS -->
 		<script src="/assets/vendor/libs/apex-charts/apexcharts.js"></script>
 		<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+		
+		
 
 		<!-- Main JS -->
 		<script src="/assets/js/main.js"></script>

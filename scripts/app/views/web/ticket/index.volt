@@ -11,8 +11,8 @@
                 value = "{{query['q']}}"
                 type="text"
                 class="form-control border-0 mb-2"
-                placeholder="Search No Ticket without #"
-                aria-label="Search No Ticket without #"
+                placeholder="Search No Ticket"
+                aria-label="Search No Ticket"
                 aria-describedby="button-addon2"
             />
             <div class="d-flex flex-column flex-md-row align-items-center gap-3 justify-content-between mb-3">

@@ -1,4 +1,4 @@
-a:3:{i:0;s:8882:"<!DOCTYPE html>
+a:5:{i:0;s:8925:"<!DOCTYPE html>
 <html
   lang="en"
   class="light-style layout-menu-fixed"
@@ -219,8 +219,10 @@ a:3:{i:0;s:8882:"<!DOCTYPE html>
 					<!-- Content wrapper -->
 					<div class="content-wrapper">
 						<!-- Content -->
+						<?= $this->flash->output() ?>
+						
 						";s:12:"page_content";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:7:"
-						";s:4:"file";s:56:"/app/ema/client/scripts/app/views//web/layouts/main.volt";s:4:"line";i:69;}}i:1;s:1877:"
+						";s:4:"file";s:56:"/app/ema/client/scripts/app/views//web/layouts/main.volt";s:4:"line";i:71;}}i:1;s:1565:"
 						<!-- / Content -->
 
 						<div class="content-backdrop fade"></div>
@@ -273,6 +275,8 @@ a:3:{i:0;s:8882:"<!DOCTYPE html>
 		<!-- Vendors JS -->
 		<script src="/assets/vendor/libs/apex-charts/apexcharts.js"></script>
 		<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+		";s:2:"js";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:3:"
+		";s:4:"file";s:56:"/app/ema/client/scripts/app/views//web/layouts/main.volt";s:4:"line";i:112;}}i:2;s:315:"
 
 		<!-- Main JS -->
 		<script src="/assets/js/main.js"></script>

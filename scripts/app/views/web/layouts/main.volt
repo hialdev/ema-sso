@@ -65,6 +65,8 @@
 					<!-- Content wrapper -->
 					<div class="content-wrapper">
 						<!-- Content -->
+						{{ flash.output() }}
+						
 						{% block page_content %}
 						{% endblock %}
 						<!-- / Content -->
@@ -106,6 +108,8 @@
 		<!-- Vendors JS -->
 		<script src="/assets/vendor/libs/apex-charts/apexcharts.js"></script>
 		<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+		{% block js %}
+		{% endblock %}
 
 		<!-- Main JS -->
 		<script src="/assets/js/main.js"></script>
