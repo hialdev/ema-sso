@@ -35,7 +35,8 @@
             </div>
             <div class="mb-3">
                 <label for="file" class="form-label">Attach Files</label>
-                <input type="file" name="file" id="file" class="form-control" multiple="multiple">
+                <div><small>Multiple File with support extensions : pdf,png,jpg,jpeg,giff,zip</small></div>
+                <input type="file" name="file[]" id="file" class="form-control" multiple="multiple">
             </div>
             <button class="btn btn-primary d-flex align-items-center justify-content-center gap-2 w-100">Send Ticket <span class="iconify" data-icon="fa6-solid:paper-plane"></span></button>
         </form>

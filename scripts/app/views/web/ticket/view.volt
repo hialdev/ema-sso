@@ -68,22 +68,25 @@
                         {{ chat.Account.uid !== uid ? 'text-primary' : ''}}
                         ">- {{chat.Account.name}} <span class="fs-6 fw-normal fst-italic ms-2">{{chat.created}}</span></h6>
                     </div>
-                    {% if chat.file !== null %}
+                    <?php $ccf = count($chat->getFiles()); ?>
+                    {% if ccf !== 0 %}
                     <div class="d-flex flex-wrap gap-2">
-                        <a href="" class="d-inline-flex align-items-center gap-2 bg-label-secondary p-2 rounded"><span class="iconify" data-icon="bi:file-earmark-fill"></span>Namafile.jpg</a>
-                        <a href="" class="d-inline-flex align-items-center gap-2 bg-label-secondary p-2 rounded"><span class="iconify" data-icon="bi:file-earmark-fill"></span>Namafile.jpg</a>
+                        {% for file in chat.Files %}
+                        <a href="{{file.getUrl()}}" target="blank" class="d-inline-flex align-items-center gap-2 bg-label-secondary p-2 rounded me-1 mb-1"><span class="iconify" data-icon="bi:file-earmark-fill"></span>{{file.name}}</a>
+                        {% endfor %}
                     </div>
                     {% endif %}
                 </div>
             </div>
             {% endfor %}
             
-            <form method="POST">
+            <form method="POST" enctype="multipart/form-data">
                 <div class="card">
                     <h6 class="card-header">Add New Reply</h6>
                     <div class="card-body">
                         <textarea name="content" rows="10" class="form-control mb-3" id="editor"></textarea>
-                        <input type="file" name="file" class="form-control mb-3 mt-3" multiple>
+                        <div><small>Multiple File with support extensions : pdf,png,jpg,jpeg,giff,zip</small></div>
+                        <input type="file" name="file[]" class="form-control mb-3 mt-3" multiple>
                         <button type="submit" class="btn btn-primary w-100 d-flex align-items-center justify-content-center gap-2">Send <span class="iconify" data-icon="fa6-solid:paper-plane"></span></button>
                     </div>
                 </div>

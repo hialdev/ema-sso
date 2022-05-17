@@ -263,7 +263,7 @@
 <div class="container-xxl flex-grow-1 container-p-y">
     <div class="py-3">
         <h4># Add New Ticket</h4>
-        <form method="POST">
+        <form method="POST" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="subject" class="form-label">Subject / Topic Masalah</label>
                 <input type="text" name="subject" id="subject" placeholder="Subject / Topic Masalah" class="form-control">
@@ -294,7 +294,8 @@
             </div>
             <div class="mb-3">
                 <label for="file" class="form-label">Attach Files</label>
-                <input type="file" name="file" id="file" class="form-control" multiple="multiple">
+                <div><small>Multiple File with support extensions : pdf,png,jpg,jpeg,giff,zip</small></div>
+                <input type="file" name="file[]" id="file" class="form-control" multiple="multiple">
             </div>
             <button class="btn btn-primary d-flex align-items-center justify-content-center gap-2 w-100">Send Ticket <span class="iconify" data-icon="fa6-solid:paper-plane"></span></button>
         </form>

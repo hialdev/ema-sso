@@ -216,7 +216,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="dropdown-item text-danger" href="<?= $this->url->get('/sso/logout') ?>">
+                        <a class="dropdown-item text-danger" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#confirmLogout">
                             <i class="bx bx-power-off me-2"></i>
                             <span class="align-middle text-danger">Log Out</span>
                         </a>
@@ -226,7 +226,32 @@
             <!--/ User -->
         </ul>
     </nav>
-
+    <!-- Modals -->
+    <div class="modal fade" id="confirmLogout" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmLogoutTitle">Confirm Logout</h5>
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                    ></button>
+                </div>
+                <div class="modal-body">
+                    <p>Anda akan keluar dari seluruh aplikasi Elang Merah Api.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                        Batal
+                    </button>
+                    <a href="<?= $this->url->get('sso/logout') ?>" class="btn btn-primary">Ya, Keluar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end Modals -->
 <!-- / Navbar -->
 
 					<!-- Content wrapper -->

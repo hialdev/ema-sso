@@ -32,4 +32,11 @@ class TicketFile extends BaseModel
 
     }
    
+    public function getUrl ()
+    {
+        if (empty($this->config))
+            $this->config = $this->getDi()->getConfig();
+
+        return $this->config->application->baseUrl. 'files/'.$this->path;
+    }
 }
