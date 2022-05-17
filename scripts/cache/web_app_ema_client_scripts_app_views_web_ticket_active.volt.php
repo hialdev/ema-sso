@@ -13,11 +13,20 @@
 		name="viewport"
 		content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
 		/>
+		<meta name="theme-color" content="#04053E">
 
-		<title>Dashboard - Analytics | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
-
-		<meta name="description" content="" />
-
+		<!-- SEO -->
+		<title><?= $meta['title'] ?></title>
+		<meta name="description" content="<?= $meta['desc'] ?>" />
+		<meta property="og:url" content="<?= $urlNow ?>">
+		<meta property="og:description" content="<?= $meta['desc'] ?>">
+		<?php if ($meta['image'] !== null) { ?>
+		<meta property="og:image" content="<?= $meta['image'] ?>">
+		<meta name="twitter:card" content="<?= $meta['image'] ?>">
+		<?php } ?>
+		
+		<link rel="canonical" href="<?= $urlNow ?>" />
+		
 		<!-- Favicon -->
 		<link rel="icon" type="image/x-icon" href="/assets/img/ema-favicon.png" />
 
@@ -183,12 +192,16 @@
                         <div class="d-flex">
                             <div class="flex-shrink-0 me-3">
                                 <div class="avatar avatar-online">
-                                    <img src="assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                                    <img src="/assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
                                 </div>
                             </div>
                             <div class="flex-grow-1">
-                                <span class="fw-semibold d-block">John Doe</span>
-                                <small class="text-muted">Admin</small>
+                                <span class="fw-semibold d-block"><?= $profile['user']['name'] ?></span>
+                                <small class="text-muted">
+                                    <?php foreach ($profile['roles'] as $role) { ?>
+                                        <span class="badge bg-label-secondary"><?= $role ?></span>
+                                    <?php } ?>
+                                </small>
                             </div>
                         </div>
                     </a>
@@ -197,13 +210,13 @@
                         <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item" href="<?= $this->url->get($accUrl) ?>" target="_blank">
                             <i class="bx bx-user me-2"></i>
                             <span class="align-middle">My Profile</span>
                         </a>
                     </li>
                     <li>
-                        <a class="dropdown-item text-danger" href="auth-login-basic.html">
+                        <a class="dropdown-item text-danger" href="<?= $this->url->get('/sso/logout') ?>">
                             <i class="bx bx-power-off me-2"></i>
                             <span class="align-middle text-danger">Log Out</span>
                         </a>

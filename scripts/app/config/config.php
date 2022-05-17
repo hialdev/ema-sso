@@ -58,7 +58,7 @@ return new \Phalcon\Config([
             'data'      => 'EMATICCLDATA'
         ]
     ],
-    'filePath'      => '/app/ema/files/taskman/',
+    'filePath'      => '/app/ema/client/scripts/www/web/files/',
 
     'session'   => array(
         'adapter'   => 'redis', //file or redis
@@ -67,7 +67,7 @@ return new \Phalcon\Config([
             'redisPort' => 6379
         ),
         'fileOption'    => array(
-            'path'      => '/app/ema/tmp/taskman/'
+            'path'      => '/app/ema/tmp/'
         )
     ),
     'log' => [

@@ -4,7 +4,7 @@
 <div class="container-xxl flex-grow-1 container-p-y">
     <div class="py-3">
         <h4># Add New Ticket</h4>
-        <form method="POST">
+        <form method="POST" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="subject" class="form-label">Subject / Topic Masalah</label>
                 <input type="text" name="subject" id="subject" placeholder="Subject / Topic Masalah" class="form-control">

@@ -28,6 +28,35 @@ class Account extends BaseModel
         self::OTP_OAUTH         => 'Aplikasi Authenticator',
     ];
 
+    public function initialize()
+    {
+        parent::initialize();
+
+        $this->hasManyToMany(
+            'id',
+            AccountRole::class,
+            'account_id',
+            'role_id',
+            Role::class,
+            'id',
+            [
+                'reusable' => true,
+                'alias'    => 'Roles',
+            ]
+        );
+
+        $this->hasMany(
+            'id',
+            AccountRole::class,
+            'account_id',
+            [
+                'reusable' => true,
+                'alias'    => 'AccountRole'
+            ]
+        );
+
+    }
+
     public static function findByUsername ($username)
     {
         $parameters = ["(username = '$username' OR email = '$username')"];

@@ -193,15 +193,19 @@ class BaseController extends Phalcon\Mvc\Controller
     {
         if (empty($data = $this->session->get($this->config->application->appId.'_profile')))
         {
+            $acc        = $this->getLoggedAccount();
             $roles      = AccountRole::roleAsArray($this->account->id);
             $staffRole  = AccountRole::findByAccountRoleSlug($this->account->id, Role::ROLE_STAFF);
             $staff      = $staffRole ? Employee::findById($staffRole->object_id) : null;
 
             $data = [
-                'staff' => $staff ? [
+                'user' => $staff ? [
                     'id'    => $staffRole->id,
                     'name'  => $staff->getFullName(),
-                ] : false,
+                ] : [
+                    'id'    => $acc->id,
+                    'name'  => $acc->name,
+                ],
                 'roles' => $roles,
             ];
 
@@ -523,12 +527,21 @@ class BaseController extends Phalcon\Mvc\Controller
         {
             $filePath = $this->config->filePath.$filename;
             $basedir = dirname($filePath);
-
+            
             if (!file_exists($basedir)) mkdir ($basedir,0777,true);
+            
+            $allowed = array('gif', 'png', 'jpg', 'jpeg', 'zip', 'pdf');
 
-            if ($fileObject->moveTo($filePath))
-            {
-                return true;
+            if (in_array($fileObject->getExtension(),$allowed)) {
+                if ($fileObject->moveTo($filePath))
+                {
+                    return true;
+                }else{
+                    $this->flashSession->error("File $filePath tidak dapat diupload.");
+                }
+            }else{
+                $this->flashSession->error("File extension tidak didukung.");
+                return false;
             }
         }
 

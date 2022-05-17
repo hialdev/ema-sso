@@ -5,6 +5,10 @@ class HomeController extends BaseAppController
 
     public function indexAction()
     {
+        $this->meta = [
+            'title' => 'Client Dashboard - PT Elang Merah Api',
+            'desc' => 'Selamat datang client yang terhormat di dashboard ticketing PT Elang Merah Api.',
+        ];
 
         $uid = $this->getLoggedParams()->accountUid;
         $acc = Account::findByUID($uid);
@@ -23,7 +27,9 @@ class HomeController extends BaseAppController
                 'conditions' => 'account_id = :id:',
                 'bind'       => [
                     'id' => $id,
-                ]
+                ],
+                'order'      => 'created DESC',
+                'limit'      => 5,
             ]
         );
 

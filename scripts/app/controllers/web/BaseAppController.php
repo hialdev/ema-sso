@@ -2,11 +2,17 @@
 
 class BaseAppController extends BaseController
 {
+    protected $meta = [
+        'title' => 'wkwkwk',
+        'desc'  => 'ehem'
+    ];
+    
      /**
      * Go Back from whence you came
      * @return type
      */
-    protected function prevUrl() {
+    
+    public function prevUrl() {
         return $_SERVER['HTTP_REFERER'];
     }
 
@@ -69,6 +75,10 @@ class BaseAppController extends BaseController
                 $this->view->list_menus = $this->userMenu;
                 $this->view->uri = $r;
                 $this->view->cat = $c;
+                $this->view->meta = $this->meta;
+                $this->view->profile = $this->setProfile();
+                $this->view->accUrl = $this->config->application->accountUrl;               
+                $this->view->urlNow = Utils::normalizeUri($this->config->application->baseUrl , $_SERVER['REQUEST_URI']);
 
                 if ($this->activePage)
                 {

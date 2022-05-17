@@ -13,11 +13,20 @@
 		name="viewport"
 		content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
 		/>
+		<meta name="theme-color" content="#04053E">
 
-		<title>Dashboard - Analytics | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
-
-		<meta name="description" content="" />
-
+		<!-- SEO -->
+		<title><?= $meta['title'] ?></title>
+		<meta name="description" content="<?= $meta['desc'] ?>" />
+		<meta property="og:url" content="<?= $urlNow ?>">
+		<meta property="og:description" content="<?= $meta['desc'] ?>">
+		<?php if ($meta['image'] !== null) { ?>
+		<meta property="og:image" content="<?= $meta['image'] ?>">
+		<meta name="twitter:card" content="<?= $meta['image'] ?>">
+		<?php } ?>
+		
+		<link rel="canonical" href="<?= $urlNow ?>" />
+		
 		<!-- Favicon -->
 		<link rel="icon" type="image/x-icon" href="/assets/img/ema-favicon.png" />
 
@@ -183,12 +192,16 @@
                         <div class="d-flex">
                             <div class="flex-shrink-0 me-3">
                                 <div class="avatar avatar-online">
-                                    <img src="assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                                    <img src="/assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
                                 </div>
                             </div>
                             <div class="flex-grow-1">
-                                <span class="fw-semibold d-block">John Doe</span>
-                                <small class="text-muted">Admin</small>
+                                <span class="fw-semibold d-block"><?= $profile['user']['name'] ?></span>
+                                <small class="text-muted">
+                                    <?php foreach ($profile['roles'] as $role) { ?>
+                                        <span class="badge bg-label-secondary"><?= $role ?></span>
+                                    <?php } ?>
+                                </small>
                             </div>
                         </div>
                     </a>
@@ -197,13 +210,13 @@
                         <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item" href="<?= $this->url->get($accUrl) ?>" target="_blank">
                             <i class="bx bx-user me-2"></i>
                             <span class="align-middle">My Profile</span>
                         </a>
                     </li>
                     <li>
-                        <a class="dropdown-item text-danger" href="auth-login-basic.html">
+                        <a class="dropdown-item text-danger" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#confirmLogout">
                             <i class="bx bx-power-off me-2"></i>
                             <span class="align-middle text-danger">Log Out</span>
                         </a>
@@ -213,7 +226,32 @@
             <!--/ User -->
         </ul>
     </nav>
-
+    <!-- Modals -->
+    <div class="modal fade" id="confirmLogout" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmLogoutTitle">Confirm Logout</h5>
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                    ></button>
+                </div>
+                <div class="modal-body">
+                    <p>Anda akan keluar dari seluruh aplikasi Elang Merah Api.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                        Batal
+                    </button>
+                    <a href="<?= $this->url->get('sso/logout') ?>" class="btn btn-primary">Ya, Keluar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end Modals -->
 <!-- / Navbar -->
 
 					<!-- Content wrapper -->
@@ -248,7 +286,7 @@
             </div>
             <div class="mb-3">
                 <label for="file" class="form-label">Lampiran (multiple)</label>
-                <input type="file" name="file" id="file" class="form-control" multiple="multiple">
+                <input type="file" name="file[]" id="file" class="form-control" multiple="multiple">
             </div>
             <button type="submit" class="btn btn-primary d-flex align-items-center justify-content-center gap-2 w-100">Add Note <span class="iconify" data-icon="eva:file-add-fill"></span></button>
         </form>

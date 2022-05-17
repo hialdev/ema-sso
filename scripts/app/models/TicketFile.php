@@ -1,8 +1,8 @@
 <?php
 
-class Chat extends BaseModel
+class TicketFile extends BaseModel
 {
-    protected $tablename = 'chat';
+    protected $tablename = 'ticket_file';
     protected $dbprofile = 'ticket';
     protected $keys = ["id"];
 
@@ -11,23 +11,25 @@ class Chat extends BaseModel
         parent::initialize();
 
         $this->hasOne(
-            'account_id',
-            Account::class,
+            'ticket_id',
+            Ticket::class,
             'id',
             [
-                'alias'     => 'Account',
+                'alias'     => 'Ticket',
                 'reusable'  => true,
             ]
         );
 
-        $this->hasMany(
-            'id',
-            TicketFile::class,
+        $this->hasOne(
             'chat_id',
+            Chat::class,
+            'id',
             [
-                'alias'     => 'Files',
+                'alias'     => 'Chat',
                 'reusable'  => true,
             ]
         );
+
     }
+   
 }

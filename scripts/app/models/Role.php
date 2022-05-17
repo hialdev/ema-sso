@@ -10,6 +10,32 @@ class Role extends BaseModel
     protected $dbprofile = 'sso';
     protected $keys = ["id"];
 
+    public function initialize()
+    {
+        parent::initialize();
+
+        // To the intermediate table
+        $this->hasMany(
+            'id',
+            AccountRole::class,
+            'role_id'
+        );
+        
+        // Many to many -> Roles
+        $this->hasManyToMany(
+            'id',
+            AccountRole::class,
+            'role_id',
+            'account_id',
+            Account::class,
+            'id',
+            [
+                'reusable' => true,
+                'alias'    => 'Accounts',
+            ]
+        );
+    }
+
     public static function getAsOption ()
     {
         $list = parent::find();

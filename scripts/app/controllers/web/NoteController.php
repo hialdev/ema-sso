@@ -57,15 +57,18 @@ class NoteController extends BaseAppController
             $note->modifer = $id;
             $note->title = $this->request->getPost("title");
             $note->note = $this->request->getPost("note");
-            $note->file = '{"file.jpg":"\/f\/u\/1231232321\/note\/note-slug\/file.jpg","file.png":"\/f\/u\/1231232321\/note\/note-slug\/file.png","file.pdf":"\/f\/u\/1231232321\/note\/note-slug\/file.pdf"}';
             $note->slug = Utils::slugify($this->request->getPost("title").' '.$id);
 
             if ($note->save()) {
+                if ($this->request->hasFiles())
+                {
+                    $this->uploadFile($note->id);
+                }
                 $this->flashSession->success('Hooray.. data berhasil disimpan.');
-                return $this->dispatcher->forward(["controller" => "Note", "action" => "add" ]);
+                return $this->response->redirect('/note/v/'.$note->slug);
             }else{
                 $this->flashSession->error('Ooops.. Maaf data gagal disimpan.');
-                return $this->dispatcher->forward(["controller" => "Note", "action" => "add" ]);
+                return $this->response->redirect('/note/v/'.$note->slug);
             }
         } catch (\Exception $e) {
             echo $e->getMessage() . '<br>';
@@ -102,10 +105,13 @@ class NoteController extends BaseAppController
             $note->modifer = $id;
             $note->title = $this->request->getPost("title");
             $note->note = $this->request->getPost("note");
-            $note->file = '{"file.jpg":"\/f\/u\/1231232321\/note\/note-slug\/file.jpg","file.png":"\/f\/u\/1231232321\/note\/note-slug\/file.png","file.pdf":"\/f\/u\/1231232321\/note\/note-slug\/file.pdf"}';
             $note->slug = Utils::slugify($this->request->getPost("title").' '.$id);
 
             if ($note->save()) {
+                if ($this->request->hasFiles())
+                {
+                    $this->uploadFile($note->id);
+                }
                 $this->flashSession->success('Hooray.. data berhasil diupdate.');
                 return $this->response->redirect('/note');
             }else{
@@ -119,7 +125,9 @@ class NoteController extends BaseAppController
     {
         if ($slug = $this->dispatcher->getParam('slug'))
         {
-            $this->view->slug = $slug;
+            $note = Note::findFirst("slug = '$slug'");
+
+            $this->view->note = $note;
             $this->view->backUrl = $this->prevUrl();
             $this->view->pick('note/view');
         }else{
@@ -154,13 +162,114 @@ class NoteController extends BaseAppController
     public function deleteAction($slug)
     {
         $note = Note::findFirst("slug = '$slug'");
+        $files = $note->getFiles();
 
-        if ($note->delete()) {
-            $this->flashSession->success("Berhasil menghapus data.");
-            return $this->response->redirect('/note');
-        } else {
-            $this->flashSession->success("Gagal menghapus data.");
-            return $this->response->redirect('/note');
+        foreach ($files as $file) {
+            $filePath = $file->path;
+            if ($file->delete())
+            {
+                $del = $this->deleteFile($filePath);
+                $this->flashSession->success("Berhasil menghapus file $file->name.");
+            }else{
+                $this->flashSession->error("Gagal menghapus file $file->name.");
+            }
+        }
+
+        if ($del) {
+            if ($note->delete()) {
+                $this->flashSession->success("Berhasil menghapus $note->title.");
+            } else {
+                $this->flashSession->error("Gagal menghapus $note->title.");
+            }
+        }
+        
+        return $this->response->redirect('/note');
+        
+    }
+
+    public function uploadFile ($note_id)
+    {
+        $this->view->disable();
+
+        if (empty($note = Note::findFirst("id = $note_id")))
+        {
+            $this->flashSession->error("Note tidak ditemukan.");
+            return $this->response->redirect('/note/v/'.$note->slug);
+        }
+
+        $upFiles = $this->request->getUploadedFiles();
+
+        foreach ($upFiles as $upFile)
+        {
+            $fileKey = $upFile->getKey();
+            $fileKey = explode('.',$fileKey)[0];
+
+            if ($fileKey === 'file')
+            {
+                $file = new NoteFile;
+                $file->id = NoteFile::generateId();
+                $file->note_id = $note_id;
+                $fileInfo = pathinfo($upFile->getName());
+                $fileType = $upFile->getRealType();
+                $fileSize = $upFile->getSize();
+                $filePath = "note/".sprintf("%s/%s/%s_%s_%ss", $note_id, date("Y/m/d"), $note_id, $file->id, Utils::slugify($upFile->getName()));
+
+                if (!$this->saveUploadedFile($upFile, $filePath))
+                {
+                    return $this->responseError("File gagal disimpan.");
+                    return $this->response->redirect('/note/v/'.$note->slug);
+                }
+
+                $_filePath = $this->config->filePath . $filePath;
+
+                $file->path = $filePath;
+                $file->name = $fileInfo['basename'];
+                
+                if (empty($file->name))
+                {
+                    return $this->flashSession->error("Gagal menyimpan file.");
+                    return $this->response->redirect('/note/v/'.$note->slug);
+                }
+
+                $save = $file->save();
+            }
+        }
+
+        if ($save)
+        {
+            return $this->flashSession->success("Berhasil menyimpan file.");
+            return $this->response->redirect('/note/v/'.$note->slug);
+        }
+
+        $this->deleteFile ($filePath);
+
+        return $this->flashSession->error("Gagal mengupload dan menambahkan file.");
+        return $this->response->redirect('/note/v/'.$note->slug);
+    }
+
+    public function removeAction ()
+    {
+        
+        if ($id = $this->dispatcher->getParam('id'))
+        {
+            $this->view->disable();
+    
+            if ($file = NoteFile::findById($id))
+            {
+                $filePath = $file->path;
+                if ($file->delete())
+                {
+                    $this->deleteFile($filePath);
+
+                    $this->flashSession->success("Berhasil menghapus file $file->name.");
+                }else{
+                    $this->flashSession->error("Gagal menghapus file $file->name.");
+                }
+            }
+            return $this->response->redirect($this->prevUrl());
+            
+        }else{
+            $this->view->pick('erorr/404');
         }
     }
 }

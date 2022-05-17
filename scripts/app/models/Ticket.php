@@ -49,6 +49,16 @@ class Ticket extends BaseModel
                 'reusable'  => true,
             ]
         );
+
+        $this->hasMany(
+            'id',
+            TicketFile::class,
+            'ticket_id',
+            [
+                'alias'     => 'Files',
+                'reusable'  => true,
+            ]
+        );
     }
     public static function findBySlug ($slug)
     {

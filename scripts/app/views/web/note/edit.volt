@@ -26,11 +26,30 @@
             </div>
             <div class="mb-3">
                 <label for="file" class="form-label">Lampiran (multiple)</label>
-                <input type="file" name="file" id="file" class="form-control" multiple="multiple">
+                <input type="file" name="file[]" id="file" class="form-control" multiple="multiple">
             </div>
             <button type="submit" class="btn btn-primary d-flex align-items-center justify-content-center gap-2 w-100">Save Note <span class="iconify" data-icon="eva:file-add-fill"></span></button>
         </form>
     </div>
+    <?php $cf = count($note->getFiles()); ?>
+    {% if cf !== 0 %}
+    <div class="mt-3">
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="row">
+                    {% for file in note.Files %}
+                    <div class="col-12 col-lg-6">
+                        <div class="d-flex flex-wrap gap-2 justify-content-between bg-label-secondary p-2 rounded mb-3">
+                            <a href="{{file.getUrl()}}" target="blank" class="d-inline-flex align-items-center gap-2"><span class="iconify" data-icon="bi:file-earmark-fill"></span>{{file.name}}</a>
+                            <a href="/file/delete/{{file.id}}" class="d-inline-flex align-items-center justify-content-center"><span class="iconify" data-icon="fluent:delete-24-filled"></span></a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
 </div>
 {% endblock %}
 

@@ -29,12 +29,16 @@
                         <div class="d-flex">
                             <div class="flex-shrink-0 me-3">
                                 <div class="avatar avatar-online">
-                                    <img src="assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                                    <img src="/assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
                                 </div>
                             </div>
                             <div class="flex-grow-1">
-                                <span class="fw-semibold d-block">John Doe</span>
-                                <small class="text-muted">Admin</small>
+                                <span class="fw-semibold d-block"><?= $profile['user']['name'] ?></span>
+                                <small class="text-muted">
+                                    <?php foreach ($profile['roles'] as $role) { ?>
+                                        <span class="badge bg-label-secondary"><?= $role ?></span>
+                                    <?php } ?>
+                                </small>
                             </div>
                         </div>
                     </a>
@@ -43,13 +47,13 @@
                         <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item" href="<?= $this->url->get($accUrl) ?>" target="_blank">
                             <i class="bx bx-user me-2"></i>
                             <span class="align-middle">My Profile</span>
                         </a>
                     </li>
                     <li>
-                        <a class="dropdown-item text-danger" href="auth-login-basic.html">
+                        <a class="dropdown-item text-danger" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#confirmLogout">
                             <i class="bx bx-power-off me-2"></i>
                             <span class="align-middle text-danger">Log Out</span>
                         </a>
@@ -59,5 +63,30 @@
             <!--/ User -->
         </ul>
     </nav>
-
+    <!-- Modals -->
+    <div class="modal fade" id="confirmLogout" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmLogoutTitle">Confirm Logout</h5>
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                    ></button>
+                </div>
+                <div class="modal-body">
+                    <p>Anda akan keluar dari seluruh aplikasi Elang Merah Api.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                        Batal
+                    </button>
+                    <a href="<?= $this->url->get('sso/logout') ?>" class="btn btn-primary">Ya, Keluar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end Modals -->
 <!-- / Navbar -->

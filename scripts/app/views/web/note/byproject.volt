@@ -63,10 +63,10 @@
                             <div>
                                 {{note.note}}
                             </div>
-                            {% if note.file !== null %}
-                            <div class="d-flex flex-wrap gap-2">
-                                {% for key,path in note.files(note) %}
-                                    <a href="{{path}}" class="d-inline-flex align-items-center gap-2 bg-label-secondary p-2 rounded"><span class="iconify" data-icon="bi:file-earmark-fill"></span>{{key}}</a>
+                            {% if note.Files !== null %}
+                            <div class="d-flex flex-wrap">
+                                {% for file in note.Files %}
+                                    <a href="{{file.getUrl()}}" target="blank" class="d-inline-flex align-items-center gap-2 bg-label-secondary p-2 rounded me-1 mb-1"><span class="iconify" data-icon="bi:file-earmark-fill"></span>{{file.name}}</a>
                                 {% endfor %}
                             </div>
                             {% endif %}

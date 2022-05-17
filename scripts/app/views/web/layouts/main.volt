@@ -13,11 +13,20 @@
 		name="viewport"
 		content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
 		/>
+		<meta name="theme-color" content="#04053E">
 
-		<title>Dashboard - Analytics | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
-
-		<meta name="description" content="" />
-
+		<!-- SEO -->
+		<title>{{meta['title']}}</title>
+		<meta name="description" content="{{meta['desc']}}" />
+		<meta property="og:url" content="{{urlNow}}">
+		<meta property="og:description" content="{{meta['desc']}}">
+		{% if meta['image'] !== null %}
+		<meta property="og:image" content="{{meta['image']}}">
+		<meta name="twitter:card" content="{{meta['image']}}">
+		{% endif %}
+		
+		<link rel="canonical" href="{{urlNow}}" />
+		
 		<!-- Favicon -->
 		<link rel="icon" type="image/x-icon" href="/assets/img/ema-favicon.png" />
 

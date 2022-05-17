@@ -36,6 +36,15 @@ class Note extends BaseModel
                 'reusable'  => true,
             ]
         );
+        $this->hasMany(
+            'id',
+            NoteFile::class,
+            'note_id',
+            [
+                'alias'     => 'Files',
+                'reusable'  => true,
+            ]
+        );
     }
 
     public static function findBySlug ($slug)
@@ -44,9 +53,4 @@ class Note extends BaseModel
         return parent::findFirst($parameters);
     }
 
-    public function files($note)
-    {
-        $files = json_decode($note->file);
-        return $files;
-    }
 }

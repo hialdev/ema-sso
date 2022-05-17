@@ -35,8 +35,7 @@ class BaseModel extends \Phalcon\Mvc\Model
         if ($this->tablename)
         	$this->setSource($this->tablename);
     }
-
-
+	
 	protected function assignField ($record, $excludeKeys = false)
 	{
         $setSql = '';
@@ -259,6 +258,11 @@ class BaseModel extends \Phalcon\Mvc\Model
 		return $db;
 	}
 
+	public function toTanggal($data)
+    {
+        return Utils::formatTanggal($data, true, true, true);
+    }
+
     public static function getAsOptionList ($id = 'id', $name = 'name', $params = [])
     {
         $list = $params ? parent::find($params) : parent::find();
@@ -280,5 +284,5 @@ class BaseModel extends \Phalcon\Mvc\Model
 
         return $data;
     }
-
+	
 }

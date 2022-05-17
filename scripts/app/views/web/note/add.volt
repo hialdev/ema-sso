@@ -27,7 +27,7 @@
             </div>
             <div class="mb-3">
                 <label for="file" class="form-label">Lampiran (multiple)</label>
-                <input type="file" name="file" id="file" class="form-control" multiple="multiple">
+                <input type="file" name="file[]" id="file" class="form-control" multiple="multiple">
             </div>
             <button type="submit" class="btn btn-primary d-flex align-items-center justify-content-center gap-2 w-100">Add Note <span class="iconify" data-icon="eva:file-add-fill"></span></button>
         </form>

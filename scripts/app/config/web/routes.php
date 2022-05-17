@@ -9,6 +9,15 @@ $router->add(
         'action'    => 'index',
     ]
 );
+
+$router->add(
+    '/sso/logout',
+    [
+        'controller'=> 'Project',
+        'action'    => 'exit',
+    ]
+);
+
 $router->add(
     '/project/([a-zA-Z0-9\_\-]+)',
     [
@@ -149,5 +158,14 @@ $router->add(
         'controller'=> 'Blog',
         'action'    => 'view',
         'slug'      => 1,
+    ]
+);
+
+$router->add(
+    '/file/delete/([0-9]+)',
+    [
+        'controller'=> 'Note',
+        'action'    => 'remove',
+        'id'      => 1,
     ]
 );

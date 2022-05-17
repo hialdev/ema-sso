@@ -6,6 +6,31 @@ class AccountRole extends BaseModel
     protected $dbprofile = 'sso';
     protected $keys = ["id"];
 
+    public function initialize()
+    {
+        parent::initialize();
+
+        $this->belongsTo(
+            'account_id',
+            Account::class,
+            'id',
+            [
+                'reusable' => true,
+                'alias'    => 'Accounts'
+            ]
+        );
+
+        $this->belongsTo(
+            'role_id',
+            Role::class,
+            'id',
+            [
+                'reusable' => true,
+                'alias'    => 'Roles'
+            ]
+        );
+    }
+
     public static function findRoles ($accountid)
     {
         return AccountRole::query()
