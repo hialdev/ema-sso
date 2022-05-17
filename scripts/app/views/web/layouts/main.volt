@@ -16,13 +16,13 @@
 		<meta name="theme-color" content="#04053E">
 
 		<!-- SEO -->
-		<title>{{meta['title']}}</title>
-		<meta name="description" content="{{meta['desc']}}" />
+		<title>{{metaPage['title']}}</title>
+		<meta name="description" content="{{metaPage['desc']}}" />
 		<meta property="og:url" content="{{urlNow}}">
-		<meta property="og:description" content="{{meta['desc']}}">
+		<meta property="og:description" content="{{metaPage['desc']}}">
 		{% if meta['image'] !== null %}
-		<meta property="og:image" content="{{meta['image']}}">
-		<meta name="twitter:card" content="{{meta['image']}}">
+		<meta property="og:image" content="{{metaPage['image']}}">
+		<meta name="twitter:card" content="{{metaPage['image']}}">
 		{% endif %}
 		
 		<link rel="canonical" href="{{urlNow}}" />

@@ -2,6 +2,10 @@
 
 class ProjectController extends BaseAppController
 {
+    protected $metaPage = [
+        'title' => "Projects - Elang Merah Api",
+        'desc'  => "Halaman project - PT Elang Merah Api",
+    ];
 
     public function indexAction()
     {

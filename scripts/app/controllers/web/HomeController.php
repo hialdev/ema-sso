@@ -2,13 +2,13 @@
 
 class HomeController extends BaseAppController
 {
+    protected $metaPage = [
+        'title' => "Dashboard Client - Elang Merah Api",
+        'desc'  => "Halaman Dashboard Client - PT Elang Merah Api",
+    ];
 
     public function indexAction()
     {
-        $this->meta = [
-            'title' => 'Client Dashboard - PT Elang Merah Api',
-            'desc' => 'Selamat datang client yang terhormat di dashboard ticketing PT Elang Merah Api.',
-        ];
 
         $uid = $this->getLoggedParams()->accountUid;
         $acc = Account::findByUID($uid);

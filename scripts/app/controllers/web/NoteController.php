@@ -2,6 +2,10 @@
 
 class NoteController extends BaseAppController
 {
+    protected $metaPage = [
+        'title' => "Notes - Elang Merah Api",
+        'desc'  => "Dokumentasi / catatan dari project - PT Elang Merah Api",
+    ];
 
     public function indexAction()
     {
@@ -164,18 +168,27 @@ class NoteController extends BaseAppController
         $note = Note::findFirst("slug = '$slug'");
         $files = $note->getFiles();
 
-        foreach ($files as $file) {
-            $filePath = $file->path;
-            if ($file->delete())
-            {
-                $del = $this->deleteFile($filePath);
-                $this->flashSession->success("Berhasil menghapus file $file->name.");
-            }else{
-                $this->flashSession->error("Gagal menghapus file $file->name.");
+        if (count($files) !== 0) {
+            foreach ($files as $file) {
+                $filePath = $file->path;
+                if ($file->delete())
+                {
+                    $del = $this->deleteFile($filePath);
+                    $this->flashSession->success("Berhasil menghapus file $file->name.");
+                }else{
+                    $this->flashSession->error("Gagal menghapus file $file->name.");
+                }
             }
-        }
+            if ($del) {
+                if ($note->delete()) {
+                    $this->flashSession->success("Berhasil menghapus $note->title.");
+                } else {
+                    $this->flashSession->error("Gagal menghapus $note->title.");
+                }
+            }
 
-        if ($del) {
+        }else{
+            
             if ($note->delete()) {
                 $this->flashSession->success("Berhasil menghapus $note->title.");
             } else {

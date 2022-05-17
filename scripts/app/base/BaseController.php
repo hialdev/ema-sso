@@ -6,7 +6,7 @@ class BaseController extends Phalcon\Mvc\Controller
     protected $account;
 
     protected $profile;
-    protected $pageTitle = "";
+    protected $metaPage = [];
     protected $pageDescription = "";
     protected $userMenu = [];
     protected $activePage;
@@ -47,7 +47,7 @@ class BaseController extends Phalcon\Mvc\Controller
             return $this->response->redirect('error/show503')->sendHeaders();
         }
 
-        $this->view->pageTitle = 'Sesi Login Berakhir';
+        $this->view->metaPage = 'Sesi Login Berakhir';
     } */
 
     public function exitAction()
@@ -416,7 +416,7 @@ class BaseController extends Phalcon\Mvc\Controller
             $this->view->domain = $this->config->application->baseUrl;
             $this->view->appTitle = $this->config->application->title;
             $this->view->appShortTitle = $this->config->application->shortTitle;
-            $this->view->pageTitle = $this->pageTitle;
+            $this->view->metaPage = $this->metaPage;
             $this->view->pageDescription = $this->pageDescription;
             $this->view->accountUrl = $this->config->application->accountUrl;
 
@@ -446,7 +446,7 @@ class BaseController extends Phalcon\Mvc\Controller
                 }
 
                 $this->view->page = $this->activePage;
-                $this->view->pageTitle = $this->activePage['title'];
+                $this->view->metaPage = $this->activePage['title'];
                 $this->view->pageDescription = $this->activePage['desc'];
 
                 $this->initData();

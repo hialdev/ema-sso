@@ -2,6 +2,10 @@
 
 class BlogController extends BaseAppController
 {
+    protected $metaPage = [
+        'title' => "Knowladge - Elang Merah Api",
+        'desc'  => "Dapatkan berbagai pengetahuan untuk mengatasi masalah / mengetahui cara melakukan sesuatu. - PT Elang Merah Api",
+    ];
 
     public function indexAction()
     {

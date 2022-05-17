@@ -2,7 +2,10 @@
 
 class TicketController extends BaseAppController
 {
-    protected $pageTitle = "Tickets";
+    protected $metaPage = [
+        'title' => "Ticket - Elang Merah Api",
+        'desc'  => "Halaman ticket - PT Elang Merah Api",
+    ];
 
     public function indexAction()
     {

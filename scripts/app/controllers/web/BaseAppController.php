@@ -2,10 +2,7 @@
 
 class BaseAppController extends BaseController
 {
-    protected $meta = [
-        'title' => 'wkwkwk',
-        'desc'  => 'ehem'
-    ];
+    public $meta = [];
     
      /**
      * Go Back from whence you came
