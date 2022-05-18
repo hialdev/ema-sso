@@ -1,41 +1,92 @@
-a:7:{i:0;s:755:"<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title><?= $appTitle ?> | <?= $pageTitle ?></title>
-	<base href="<?= $domain ?>">
+a:3:{i:0;s:2481:"<!DOCTYPE html>
 
-	<link rel="stylesheet" href="assets/css/<?= $assets['vendor.css'] ?>">
-	<link rel="stylesheet" href="assets/css/<?= $assets['app.css'] ?>">
+<!-- =========================================================
+* Sneat - Bootstrap 5 HTML Admin Template - Pro | v1.0.0
+==============================================================
 
-	<link rel="apple-touch-icon" sizes="180x180" href="assets/icon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="assets/icon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="assets/icon/favicon-16x16.png">
-	<link rel="manifest" href="assets/icon/site.webmanifest">
+* Product Page: https://themeselection.com/products/sneat-bootstrap-html-admin-template/
+* Created by: ThemeSelection
+* License: You must have a valid license purchased in order to legally use the theme for your project.
+* Copyright ThemeSelection (https://themeselection.com)
 
-	";s:11:"page_styles";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:2:"
-	";s:4:"file";s:58:"/app/ema/client/scripts/app/views//web/layouts/public.volt";s:4:"line";i:19;}}i:1;s:152:"
+=========================================================
+ -->
+<!-- beautify ignore:start -->
+<html
+	lang="en"
+	class="light-style"
+	dir="ltr"
+	data-theme="theme-default"
+	data-assets-path="/assets/"
+	data-template="vertical-menu-template-free"
+	>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+		<title><?= $appTitle ?></title>
+		<meta name="description" content="" />
 
-</head>
-<body>
-	<!-- Page content -->
-	<div class="page-content">
-		<!-- Main content -->
-		<div class="content-wrapper">
-			<!-- Content area -->
-			";s:12:"page_content";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:4:"
-			";s:4:"file";s:58:"/app/ema/client/scripts/app/views//web/layouts/public.volt";s:4:"line";i:29;}}i:2;s:159:"
-			<!-- /content area -->
-		</div>
-		<!-- /main content -->
-	</div>
-	<!-- /page content -->
+		<!-- Favicon -->
+		<link rel="icon" type="image/x-icon" href="/assets/img/ema-favicon.png" />
 
-	<script src="assets/js/<?= $assets['vendor.js'] ?>"></script>
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+		href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+		rel="stylesheet"
+		/>
 
-	";s:12:"page_scripts";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:2:"
-	";s:4:"file";s:58:"/app/ema/client/scripts/app/views//web/layouts/public.volt";s:4:"line";i:39;}}i:3;s:16:"
-</body>
-</html>";}
+		<!-- Icons. Uncomment required icon fonts -->
+		<link rel="stylesheet" href="/assets/vendor/fonts/boxicons.css" />
+
+		<!-- Core CSS -->
+		<link rel="stylesheet" href="/assets/vendor/css/core.css" class="template-customizer-core-css" />
+		<link rel="stylesheet" href="/assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+		<link rel="stylesheet" href="/assets/css/demo.css" />
+
+		<!-- Vendors CSS -->
+		<link rel="stylesheet" href="/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+
+		<!-- Page CSS -->
+		<!-- Page -->
+		<link rel="stylesheet" href="/assets/vendor/css/pages/page-misc.css" />
+		<!-- Helpers -->
+		<script src="/assets/vendor/js/helpers.js"></script>
+
+		<!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+		<!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+		<script src="/assets/js/config.js"></script>
+	</head>
+
+	<body>
+		<!-- Content -->
+
+		<!-- Error -->
+		";s:12:"page_content";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:6:"
+		
+		";s:4:"file";s:58:"/app/ema/client/scripts/app/views//web/layouts/public.volt";s:4:"line";i:68;}}i:1;s:701:"
+		<!-- /Error -->
+
+		<!-- Core JS -->
+		<!-- build:js assets/vendor/js/core.js -->
+		<script src="/assets/vendor/libs/jquery/jquery.js"></script>
+		<script src="/assets/vendor/libs/popper/popper.js"></script>
+		<script src="/assets/vendor/js/bootstrap.js"></script>
+		<script src="/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+		<script src="/assets/vendor/js/menu.js"></script>
+		<!-- endbuild -->
+
+		<!-- Vendors JS -->
+
+		<!-- Main JS -->
+		<script src="/assets/js/main.js"></script>
+
+		<!-- Page JS -->
+
+		<!-- Place this tag in your head or just before your close body tag. -->
+		<script async defer src="https://buttons.github.io/buttons.js"></script>
+	</body>
+</html>
+";}

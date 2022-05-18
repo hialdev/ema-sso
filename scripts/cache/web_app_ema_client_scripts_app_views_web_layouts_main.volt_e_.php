@@ -1,4 +1,4 @@
-a:5:{i:0;s:10853:"<!DOCTYPE html>
+a:5:{i:0;s:10854:"<!DOCTYPE html>
 <html
   lang="en"
   class="light-style layout-menu-fixed"
@@ -13,14 +13,14 @@ a:5:{i:0;s:10853:"<!DOCTYPE html>
 		name="viewport"
 		content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
 		/>
-		<meta name="theme-color" content="#04053E">
+		<meta name="theme-color" content="#fff">
 
 		<!-- SEO -->
 		<title><?= $metaPage['title'] ?></title>
 		<meta name="description" content="<?= $metaPage['desc'] ?>" />
 		<meta property="og:url" content="<?= $urlNow ?>">
 		<meta property="og:description" content="<?= $metaPage['desc'] ?>">
-		<?php if ($meta['image'] !== null) { ?>
+		<?php if ($metaPage['image'] !== null) { ?>
 		<meta property="og:image" content="<?= $metaPage['image'] ?>">
 		<meta name="twitter:card" content="<?= $metaPage['image'] ?>">
 		<?php } ?>

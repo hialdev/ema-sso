@@ -1,33 +1,22 @@
-{%extends 'layouts/public.volt' %}
+{% extends 'layouts/public.volt' %}
 
-{%block page_content%}
-<div class="content d-flex justify-content-center align-items-center">
-
-    <!-- Login form -->
-    <form class="login-form" method="POST">
-        <div class="card mb-0">
-            <div class="card-body">
-
-                <div class="text-center mb-2">
-                    <div class="mb-1"><img class="logo-on-card" src="assets/images/logo.png" ></div>
-                    <h5 class="mb-2">{{appTitle}}</h5>
-                </div>
-
-                <div class="text-center mb-2">
-                    <h4 class="font-weight-bold m-0 text-info">[ 404 ]</h4>
-                    <div class=" text-error">Halaman yang anda tuju tidak ditemukan</div>
-                </div>
-
-                <div class="text-center">
-                    <a href="{{domain}}" class="text-center">Kembali</a>  ke halaman utama
-                </div>
-
-            </div>
+{% block page_content %}
+<div class="container-xxl container-p-y">
+    <div class="misc-wrapper">
+        <h2 class="mb-2 mx-2">Halaman Tidak ditemukan :(</h2>
+        <h5 class="mb-2">{{appTitle}}</h5>
+        <p class="mb-4 mx-2">Oops! 😖 The requested URL was not found on this server.</p>
+        <a href="{{url('/')}}" class="btn btn-primary">Back to home</a>
+        <div class="mt-3">
+            <img
+                src="/assets/img/illustrations/page-misc-error-light.png"
+                alt="page-misc-error-light"
+                width="500"
+                class="img-fluid"
+                data-app-dark-img="illustrations/page-misc-error-dark.png"
+                data-app-light-img="illustrations/page-misc-error-light.png"
+            />
         </div>
-
-        <div class="text-center mt-2 footer">
-            <strong>Copyright &copy; {{date("Y")}}</strong> All rights reserved.
-        </div>
-    </form>
+    </div>
 </div>
-{%endblock%}
+{% endblock %}

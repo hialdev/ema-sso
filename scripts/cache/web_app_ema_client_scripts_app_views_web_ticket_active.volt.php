@@ -20,7 +20,7 @@
 		<meta name="description" content="<?= $metaPage['desc'] ?>" />
 		<meta property="og:url" content="<?= $urlNow ?>">
 		<meta property="og:description" content="<?= $metaPage['desc'] ?>">
-		<?php if ($meta['image'] !== null) { ?>
+		<?php if ($metaPage['image'] !== null) { ?>
 		<meta property="og:image" content="<?= $metaPage['image'] ?>">
 		<meta name="twitter:card" content="<?= $metaPage['image'] ?>">
 		<?php } ?>
